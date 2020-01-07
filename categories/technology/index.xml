@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>technology on BabaGyan.com</title>
+    <link>/categories/technology/</link>
+    <description>Recent content in technology on BabaGyan.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2019 04:10:01 -0500</lastBuildDate>
+    
+	<atom:link href="/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Amazing India Technology trip</title>
+      <link>/initialize-podcast/</link>
+      <pubDate>Tue, 31 Dec 2019 04:10:01 -0500</pubDate>
+      
+      <guid>/initialize-podcast/</guid>
+      <description>COMING SOON
+A new podcast on Technology, Analytics and Data Science as core with some off-road trips to finance new, world news and related topics.
+If you want to be our guest on podcast or want to be a co-host or host on your own on the BabaGyan podcast, please write to use an email at Contact@BabaGyan.com!</description>
+    </item>
+    
+  </channel>
+</rss>
