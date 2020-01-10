@@ -6,9 +6,82 @@
     <description>Recent content in Tags on BabaGyan.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2019 04:10:01 -0500</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>acquisitions</title>
+      <link>/tags/acquisitions/</link>
+      <pubDate>Tue, 31 Dec 2019 04:10:01 -0500</pubDate>
+      
+      <guid>/tags/acquisitions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>analytics</title>
+      <link>/tags/analytics/</link>
+      <pubDate>Tue, 31 Dec 2019 04:10:01 -0500</pubDate>
+      
+      <guid>/tags/analytics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>/tags/aws/</link>
+      <pubDate>Tue, 31 Dec 2019 04:10:01 -0500</pubDate>
+      
+      <guid>/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>azure</title>
+      <link>/tags/azure/</link>
+      <pubDate>Tue, 31 Dec 2019 04:10:01 -0500</pubDate>
+      
+      <guid>/tags/azure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data-science</title>
+      <link>/tags/data-science/</link>
+      <pubDate>Tue, 31 Dec 2019 04:10:01 -0500</pubDate>
+      
+      <guid>/tags/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gcp</title>
+      <link>/tags/gcp/</link>
+      <pubDate>Tue, 31 Dec 2019 04:10:01 -0500</pubDate>
+      
+      <guid>/tags/gcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mergers</title>
+      <link>/tags/mergers/</link>
+      <pubDate>Tue, 31 Dec 2019 04:10:01 -0500</pubDate>
+      
+      <guid>/tags/mergers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>news</title>
+      <link>/tags/news/</link>
+      <pubDate>Tue, 31 Dec 2019 04:10:01 -0500</pubDate>
+      
+      <guid>/tags/news/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

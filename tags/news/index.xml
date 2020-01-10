@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>news on BabaGyan.com</title>
+    <link>/tags/news/</link>
+    <description>Recent content in news on BabaGyan.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Dec 2019 04:10:01 -0500</lastBuildDate>
+    
+	<atom:link href="/tags/news/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Look at 2019 Analytics news impacting 2020</title>
+      <link>/a-look-at-2019-analytics-tech-news/</link>
+      <pubDate>Tue, 31 Dec 2019 04:10:01 -0500</pubDate>
+      
+      <guid>/a-look-at-2019-analytics-tech-news/</guid>
+      <description>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.
+There are 3 important sections when it comes to analytics:
+ Computing Data science Visualization  What we can do with each of these defines the future of this industry.
+Computing is where we do our analytics and is dominated by big Cloud companies lead by AWS and followed (closely in some areas) by Azure, Google and others.</description>
+    </item>
+    
+  </channel>
+</rss>
