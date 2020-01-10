@@ -40,6 +40,51 @@
     <itunes:category text="Technology">
       <itunes:category text="Software How-To" /><itunes:category text="Tech News" /></itunes:category><generator>Hugo -- gohugo.io</generator>
         <item>
+          <title>A Look at 2019 Analytics News Impacting 2020</title>
+          <link>/a-look-at-2019-analytics-tech-news/</link>
+          <pubDate>Tue, 31 Dec 2019 04:10:01 -0500 </pubDate>
+          <dc:creator></dc:creator>
+          <guid>https://media.blubrry.com,/arresteddevops/content.blubrry.com/arresteddevops/</guid>
+          <itunes:author>
+            
+            
+              Dhanesh</itunes:author>
+          
+          <itunes:episode>0</itunes:episode>
+          
+        <itunes:summary>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</itunes:summary>
+        <description>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</description>
+        <googleplay:description>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</googleplay:description>
+        <content:encoded><![CDATA[<p>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</p>
+<p>There are 3 important sections when it comes to analytics:</p>
+<ul>
+<li>Computing</li>
+<li>Data science</li>
+<li>Visualization</li>
+</ul>
+<p>What we can do with each of these defines the future of this industry.</p>
+<p>Computing is where we do our analytics and is dominated by big Cloud companies lead by AWS and followed (closely in some areas) by Azure, Google and others.
+Services like Google's Dataflow, Dataproc, Bigquery or Amazon's Redshift, EMR, Sagemaker, or Azure's Data lake, databricks, etc.. or just pure spark cluster with fume and splunk and more.. All of these are all capable of creating data lake, pipelines for loading structured and unstructured data, and do analtical deep dive in data.</p>
+<p>Data science is how we do what we do with data. New trends are explored with computing becoming accessible and ML and other algorithms also going on Cloud and now becoming accessible as APIs.
+Python and R are widely used and there are also tools around it. Spark, Knime, Talend, Pentaho, Domo, all these tools are capable of doing ETL and more with their cloud connectivity.</p>
+<p>The third part of visualization of the analytics itself. There are various players in this sector which are new and many old ones, which dominated the traditional Business Intelligence sector are also imporvingever improving to comsume the data and show up the actionable insights to the user.
+Tableau, Microstrategy, Watson, Tibco, SAP, Qlikview, Vega, PowerBI, and many more are available.</p>
+<p>So, what happened in 2019 that can change the dynamics of these tools, technologies and platforms?</p>
+<p>The biggest news in terms of dollars is
+Salesforce to acquire Tableau for $15.7 billion
+Google to acquire Looker for $2.6 billion
+Qlik Acquires Attunity for $560 million
+Cloudera Hortonworks mega merger means for the big data industry</p>
+<p>Google acquires Fitbit for $2.1 billion</p>
+<p>Twilio acquires SendGrid for $3 billion
+HPE acquires assets from troubled MapR
+Splunk to acquire SignalFx for $1.05 billion</p>
+<p>Apple acquires Intel's modem business for $1 billion</p>
+<p>If you want to be our guest on podcast or want to be a co-host or host on your own on the BabaGyan podcast, please write to use an email at <a href="mailto:Contact@BabaGyan.com">Contact@BabaGyan.com</a>!</p>
+]]></content:encoded><itunes:image href="/img/episode/from-2019-to-2020.jpg"></itunes:image>
+          <googleplay:image href="/img/episode/from-2019-to-2020.jpg"></googleplay:image><enclosure url="https://media.blubrry.com,/arresteddevops/content.blubrry.com/arresteddevops/" length="123" type="audio/mpeg" /><itunes:duration>01:02:22</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:explicit>no</googleplay:explicit></item>
+        <item>
           <title>Amazing India Technology Trip</title>
           <link>/initialize-podcast/</link>
           <pubDate>Tue, 31 Dec 2019 04:10:01 -0500 </pubDate>
