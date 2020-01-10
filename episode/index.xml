@@ -14,7 +14,7 @@
     <atom:link href="/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>/</link>
     <description>The BabaGyan.com has News and Podcast on Technology, Analytics and Data Science. It is a place to listen to podcast about latest in technology, learn new technologies, share your knowledge. You will learn about range of things from guests who have done it and know it. Podcast will also feature weekly News analysis for technology, finance and world macro economics topics.</description>
-    <lastBuildDate>Tue, 31 Dec 2019 04:10:01 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 04:10:01 -0500</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -42,7 +42,7 @@
         <item>
           <title>A Look at 2019 Analytics News Impacting 2020</title>
           <link>/a-look-at-2019-analytics-tech-news/</link>
-          <pubDate>Tue, 31 Dec 2019 04:10:01 -0500 </pubDate>
+          <pubDate>Fri, 10 Jan 2020 04:10:01 -0500 </pubDate>
           <dc:creator></dc:creator>
           <guid>https://media.blubrry.com,/arresteddevops/content.blubrry.com/arresteddevops/</guid>
           <itunes:author>
@@ -55,7 +55,8 @@
         <itunes:summary>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</itunes:summary>
         <description>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</description>
         <googleplay:description>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</googleplay:description>
-        <content:encoded><![CDATA[<p>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</p>
+        <content:encoded><![CDATA[<p>Welcome to first episode of my podcast on core topics of Technology, Analytics and Data Science.</p>
+<p>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</p>
 <p>There are 3 important sections when it comes to analytics:</p>
 <ul>
 <li>Computing</li>
