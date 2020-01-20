@@ -31,6 +31,8 @@
       <itunes:email>aradhye.dhanesh@gmail.com</itunes:email>
     </itunes:owner>
     <itunes:image href="https://i1.sndcdn.com/avatars-000759322840-3hnb0v-t500x500.jpg" />
+    <itunes:explicit>No</itunes:explicit>
+    <googleplay:explicit>No</googleplay:explicit>
     <googleplay:image href="https://babagyan.com/img/profile.png"></googleplay:image>
     <image>
       <url>https://babagyan.com/img/profile.png</url>
