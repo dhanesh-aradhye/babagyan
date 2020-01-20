@@ -10,7 +10,7 @@
      xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
     >
   <channel>
-    <title>Analytics on Air</title>
+    <title>BabaGyan.com</title>
     <atom:link href="https://babagyan.com/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>https://babagyan.com</link>
     <description>Analytics on Air podcast at BabaGyan.com - it has News and Podcast on Technology, Data Analytics, Data Science and Visualization. It is a place to listen to Analytics on Air podcast by Dhanesh where one learns about News from Analytics field, new technologies and share knowledge. You will learn about range of things from guests who have done it and know it.</description>
@@ -19,7 +19,7 @@
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
     <copyright>Powered by Turtle Products and Solutions ©2019</copyright>
-    <itunes:subtitle>The best podcast ever</itunes:subtitle>
+    <itunes:subtitle>The Analytics and Technology podcast with reviews and interviews</itunes:subtitle>
     <itunes:author>Dhanesh</itunes:author>
     <itunes:type>episodic</itunes:type>
     <googleplay:author>Dhanesh</googleplay:author>
@@ -31,7 +31,6 @@
       <itunes:email>aradhye.dhanesh@gmail.com</itunes:email>
     </itunes:owner>
     <itunes:image href="https://babagyan.com/img/profile.png" />
-    <itunes:explicit>No</itunes:explicit>
     <googleplay:image href="https://babagyan.com/img/profile.png"></googleplay:image>
     <image>
       <url>https://babagyan.com/img/profile.png</url>
