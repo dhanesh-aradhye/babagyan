@@ -11,15 +11,15 @@
     >
   <channel>
     <title>BabaGyan.com</title>
-    <atom:link href="/episode/index.xml" rel="self" type="application/rss+xml" />
-    <link>/</link>
+    <atom:link href="https://babagyan.com/episode/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://babagyan.com</link>
     <description>Analytics on Air podcast at BabaGyan.com - it has News and Podcast on Technology, Data Analytics, Data Science and Visualization. It is a place to listen to Analytics on Air podcast by Dhanesh where one learns about News from Analytics field, new technologies and share knowledge. You will learn about range of things from guests who have done it and know it.</description>
     <lastBuildDate>Fri, 10 Jan 2020 04:10:01 -0500</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
     <copyright>Powered by Turtle Products and Solutions ©2019</copyright>
-    <itunes:subtitle>The best podcast ever</itunes:subtitle>
+    <itunes:subtitle>Analytics Podcast</itunes:subtitle>
     <itunes:author>Dhanesh</itunes:author>
     <itunes:type>episodic</itunes:type>
     <googleplay:author>Dhanesh</googleplay:author>
@@ -38,9 +38,8 @@
       <link>/</link>
     </image>
     <itunes:category text="Technology">
+    <itunes:explicit>No</itunes:explicit>
       <itunes:category text="Software How-To" /><itunes:category text="Tech News" /></itunes:category><generator>Hugo -- gohugo.io</generator>
-       <itunes:explicit>N</itunes:explicit>
-          <googleplay:explicit>N</googleplay:explicit>
         <item>
           <title>A Look at 2019 Analytics News Which Will Impact in 2020</title>
           <link>/a-look-at-2019-analytics-tech-news/</link>
@@ -95,7 +94,7 @@ Splunk is known for its data processing capabilities and SignalFx provides real-
 <p>Credit for Background music file: &ldquo;Fuzzball Parade&rdquo; Kevin MacLeod (incompetech.com)
 Licensed under Creative Commons: By Attribution 4.0 License
 <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>
-]]></content:encoded><itunes:image href="/img/episode/from-2019-to-2020.jpg"></itunes:image>
-          <googleplay:image href="/img/episode/from-2019-to-2020.jpg"></googleplay:image><enclosure url="https://storage.googleapis.com/babagyan/01_Analytics%20On%20Air_Dhanesh_20200120.mp3" length="8158335" type="audio/mpeg" /><itunes:duration>00:07:22</itunes:duration><itunes:explicit>N</itunes:explicit>
-          <googleplay:explicit>N</googleplay:explicit></item></channel>
+]]></content:encoded><itunes:image href="https://babagyan.com/img/episode/from-2019-to-2020.jpg"></itunes:image>
+          <googleplay:image href="https://babagyan.com/img/episode/from-2019-to-2020.jpg"></googleplay:image><enclosure url="https://storage.googleapis.com/babagyan/01_Analytics%20On%20Air_Dhanesh_20200120.mp3" length="8158335" type="audio/mpeg" /><itunes:duration>00:07:22</itunes:duration><itunes:explicit>No</itunes:explicit>
+          <googleplay:explicit>No</googleplay:explicit></item></channel>
 </rss>
