@@ -13,7 +13,7 @@
     <title>BabaGyan.com</title>
     <atom:link href="/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>/</link>
-    <description>The BabaGyan.com has News and Podcast on Technology, Analytics and Data Science. It is a place to listen to podcast about latest in technology, learn new technologies, share your knowledge. You will learn about range of things from guests who have done it and know it. Podcast will also feature weekly News analysis for technology, finance and world macro economics topics.</description>
+    <description>Analytics on Air podcast at BabaGyan.com - it has News and Podcast on Technology, Data Analytics, Data Science and Visualization. It is a place to listen to Analytics on Air podcast by Dhanesh where one learns about News from Analytics field, new technologies and share knowledge. You will learn about range of things from guests who have done it and know it.</description>
     <lastBuildDate>Fri, 10 Jan 2020 04:10:01 -0500</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
@@ -23,12 +23,12 @@
     <itunes:author>Dhanesh</itunes:author>
     <itunes:type>episodic</itunes:type>
     <googleplay:author>Dhanesh</googleplay:author>
-    <googleplay:email>contact@babagyan.com</googleplay:email>
-    <itunes:summary>The BabaGyan.com has News and Podcast on Technology, Analytics and Data Science. It is a place to listen to podcast about latest in technology, learn new technologies, share your knowledge. You will learn about range of things from guests who have done it and know it. Podcast will also feature weekly News analysis for technology, finance and world macro economics topics.</itunes:summary>
-    <googleplay:description>The BabaGyan.com has News and Podcast on Technology, Analytics and Data Science. It is a place to listen to podcast about latest in technology, learn new technologies, share your knowledge. You will learn about range of things from guests who have done it and know it. Podcast will also feature weekly News analysis for technology, finance and world macro economics topics.</googleplay:description>
+    <googleplay:email>aradhye.dhanesh@gmail.com</googleplay:email>
+    <itunes:summary>Analytics on Air podcast at BabaGyan.com - it has News and Podcast on Technology, Data Analytics, Data Science and Visualization. It is a place to listen to Analytics on Air podcast by Dhanesh where one learns about News from Analytics field, new technologies and share knowledge. You will learn about range of things from guests who have done it and know it.</itunes:summary>
+    <googleplay:description>Analytics on Air podcast at BabaGyan.com - it has News and Podcast on Technology, Data Analytics, Data Science and Visualization. It is a place to listen to Analytics on Air podcast by Dhanesh where one learns about News from Analytics field, new technologies and share knowledge. You will learn about range of things from guests who have done it and know it.</googleplay:description>
     <itunes:owner>
       <itunes:name>Dhanesh</itunes:name>
-      <itunes:email>contact@babagyan.com</itunes:email>
+      <itunes:email>aradhye.dhanesh@gmail.com</itunes:email>
     </itunes:owner>
     <itunes:image href="https://www.arresteddevops.com/img/ado-podcast-logo.png" />
     <googleplay:image href="https://www.arresteddevops.com/img/ado-podcast-logo.png"></googleplay:image>
@@ -40,11 +40,11 @@
     <itunes:category text="Technology">
       <itunes:category text="Software How-To" /><itunes:category text="Tech News" /></itunes:category><generator>Hugo -- gohugo.io</generator>
         <item>
-          <title>A Look at 2019 Analytics News Impacting 2020</title>
+          <title>A Look at 2019 Analytics News Which Will Impact in 2020</title>
           <link>/a-look-at-2019-analytics-tech-news/</link>
           <pubDate>Fri, 10 Jan 2020 04:10:01 -0500 </pubDate>
           <dc:creator></dc:creator>
-          <guid>https://media.blubrry.com,/arresteddevops/content.blubrry.com/arresteddevops/</guid>
+          <guid>https://storage.googleapis.com/babagyan/01_Analytics%20On%20Air_Dhanesh_20200120.mp3</guid>
           <itunes:author>
             
             
@@ -55,56 +55,45 @@
         <itunes:summary>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</itunes:summary>
         <description>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</description>
         <googleplay:description>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</googleplay:description>
-        <content:encoded><![CDATA[<p>Welcome to first episode of my podcast on core topics of Technology, Analytics and Data Science.</p>
-<p>Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.</p>
-<p>There are 3 important sections when it comes to analytics:</p>
+        <content:encoded><![CDATA[<p>Welcome to first episode of my podcast series &ldquo;Analytics on air&rdquo;. Here, I will be talking about various topics from the field of Data Analytics including hot news, insights, interviews and product presentations and  tool evaluations.</p>
+<p>As per wikipedia, Analytics is the discovery, interpretation, and communication of meaningful patterns in data.
+What does that mean:
+It means there are 3 important sections when it comes to analytics:</p>
 <ul>
-<li>Computing</li>
-<li>Data science</li>
-<li>Visualization</li>
+<li>Computing - required for consuming data for discovery of patterns</li>
+<li>Data science - required for identificatoin and interpretation of patterns in data</li>
+<li>Visualization - necessary for comminication of meanings found from the pattern</li>
 </ul>
 <p>What we can do with each of these defines the future of this industry.</p>
-<p>Computing is where we do our analytics and is dominated by big Cloud companies lead by AWS and followed (closely in some areas) by Azure, Google and others.
-Services like Google's Dataflow, Dataproc, Bigquery or Amazon's Redshift, EMR, Sagemaker, or Azure's Data lake, databricks, etc.. or just pure spark cluster with fume and splunk and more.. All of these are all capable of creating data lake, pipelines for loading structured and unstructured data, and do analtical deep dive in data.</p>
-<p>Data science is how we do what we do with data. New trends are explored with computing becoming accessible and ML and other algorithms also going on Cloud and now becoming accessible as APIs.
-Python and R are widely used and there are also tools around it. Spark, Knime, Talend, Pentaho, Domo, all these tools are capable of doing ETL and more with their cloud connectivity.</p>
-<p>The third part of visualization of the analytics itself. There are various players in this sector which are new and many old ones, which dominated the traditional Business Intelligence sector are also imporvingever improving to comsume the data and show up the actionable insights to the user.
-Tableau, Microstrategy, Watson, Tibco, SAP, Qlikview, Vega, PowerBI, and many more are available.</p>
-<p>So, what happened in 2019 that can change the dynamics of these tools, technologies and platforms?</p>
-<p>The biggest news in terms of dollars is
-Salesforce to acquire Tableau for $15.7 billion
-Google to acquire Looker for $2.6 billion
-Qlik Acquires Attunity for $560 million
-Cloudera Hortonworks mega merger means for the big data industry</p>
-<p>Google acquires Fitbit for $2.1 billion</p>
-<p>Twilio acquires SendGrid for $3 billion
-HPE acquires assets from troubled MapR
-Splunk to acquire SignalFx for $1.05 billion</p>
-<p>Apple acquires Intel's modem business for $1 billion</p>
+<p>Computing is where we do our analytics, and it is dominated by big companies lead by Amazon with it's AWS and followed (closely in some areas) by Microsoft's Azure, Google's Google Cloud Platform GCP and others.
+There are also big players for on premise computing, likes of IBM, HP and Dell do have strong servers for any datacenter.</p>
+<p>Cloud computing additionally brings in serverless services like Google's Dataflow, Dataproc, Bigquery or Amazon's Redshift, EMR, Sagemaker, or Azure's Data lake, Databricks, etc.. These services are also pivotal in shaping the future of Analytics industry.</p>
+<p>Second component of Analytics is Data science. It is how we do the things with the data we have.
+Artificial Intelligence and Machine Learning have reached to new heights and new ways of exploring data are always comping up.</p>
+<p>Python and R are widely used and there are also tools around it. Spark, Knime, Talend, Pentaho, Domo, all these tools are capable of doing ETL and more with their cloud connectivity.</p>
+<p>The third part of visualization of the analytics itself. There are various players in this sector - some are innovatively new and many are old ones. This sector is dominated by the traditional Business Intelligence companies who are also ever improving to comsume the data and show up the actionable insights to the user.
+Tableau, Microstrategy, Cognos, Tibco, SAP, Qlikview, Vega, PowerBI, Looker and many more are available to explore.</p>
+<p>That was a brief about broader term Analytics.</p>
+<p>Today's podcast is divided in couple of sections. First, I will go through some interesting news from Analytics field which dominated year 2019. Later, we will take a look at one of the tools from the field of Analytics.</p>
+<p>So, in news:</p>
+<p>Analytics has got onto interesting roads in year 2020 with some big news which came in 2019.</p>
+<p>The biggest news in terms of dollars was Salesforce's acquisition of Tableau for $15.7 billion.</p>
+<p>The impact of this deal is aptly and rightly described by techcrunch:
+With Tableau  and MuleSoft (a company it bought last year for $6.5 billion) in the fold, Salesforce has a much broader view of the enterprise than it could as a pure cloud company. It has access to data wherever it lives, whether on premises or in the cloud, and with Tableau, it enables customers to bring that data to life by visualizing it.</p>
+<p>Google to acquire Looker for $2.6 billion.
+Looker is a hot property in the city of analytics and Google is.. Google. Data is Google's bread and butter as well as strong point and they also have a ever evolving cloud platform, so with Looker's acquisition, Google gets a good customer base to upsell.</p>
+<p>A smaller but notable deal took place betweek Qlik and Attunity where Qlik Acquires Attunity for $560 million.
+Qlik is a leader in data analytics, and Attunity is one of the a leading providers of data integration and big data management software solutions. The unified force of these two companies gives Qlik an expanded breadth of enterprise data management capabilities and adds an experienced team of data professionals to its team.</p>
+<p>An interesting merger is the mega merger of Cloudera and Hortonworks.
+Both these companies are very similar to each other as both are leading bigdata platform providers. Both were red hot once few years back. Now both are struggling with same problems too. So the merger will allow new company to expand the customer base with best of themselves and combined focus on solving problems they face, some of which are common.</p>
+<p>The third major bigdata platform provider MapR has been long struggling and it has finally sold its assets to Hewlett Packard Enterprise (HPE). This deal is expected to provide HP with strong expertize in machine learning (ML) and artificial intelligence (AI), which MapR developed into their portfolio of support and services.</p>
+<p>Last but not the least, I want to highlight Splunk's acquisition of SignalFx for $1.05 billion.
+Splunk is known for its data processing capabilities and SignalFx provides real-time cloud monitoring solutions, predictive analytics and more. The acquisition will strengthen Splunk's solutions in the cloud space as it expands its support for cloud-native applications. It would position Splunk as a leader in monitoring and observability at massive scale for enterprises.</p>
 <p>If you want to be our guest on podcast or want to be a co-host or host on your own on the BabaGyan podcast, please write to use an email at <a href="mailto:Contact@BabaGyan.com">Contact@BabaGyan.com</a>!</p>
+<p>Credit for Background music file: &ldquo;Fuzzball Parade&rdquo; Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0 License
+<a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a></p>
 ]]></content:encoded><itunes:image href="/img/episode/from-2019-to-2020.jpg"></itunes:image>
-          <googleplay:image href="/img/episode/from-2019-to-2020.jpg"></googleplay:image><enclosure url="https://media.blubrry.com,/arresteddevops/content.blubrry.com/arresteddevops/" length="123" type="audio/mpeg" /><itunes:duration>01:02:22</itunes:duration><itunes:explicit>no</itunes:explicit>
-          <googleplay:explicit>no</googleplay:explicit></item>
-        <item>
-          <title>Amazing India Technology Trip</title>
-          <link>/initialize-podcast/</link>
-          <pubDate>Tue, 31 Dec 2019 04:10:01 -0500 </pubDate>
-          <dc:creator></dc:creator>
-          <guid>https://media.blubrry.com,/arresteddevops/content.blubrry.com/arresteddevops/</guid>
-          <itunes:author>
-            
-            
-              Dhanesh</itunes:author>
-          
-          <itunes:episode>0</itunes:episode>
-          
-        <itunes:summary>Coming Soon!!! A new podcast on Technology, Analytics and Data Science as core with some off-road trips to finance news, world news and related topics.</itunes:summary>
-        <description>Coming Soon!!! A new podcast on Technology, Analytics and Data Science as core with some off-road trips to finance news, world news and related topics.</description>
-        <googleplay:description>Coming Soon!!! A new podcast on Technology, Analytics and Data Science as core with some off-road trips to finance news, world news and related topics.</googleplay:description>
-        <content:encoded><![CDATA[<p>COMING SOON</p>
-<p>A new podcast on Technology, Analytics and Data Science as core with some off-road trips to finance new, world news and related topics.</p>
-<p>If you want to be our guest on podcast or want to be a co-host or host on your own on the BabaGyan podcast, please write to use an email at <a href="mailto:Contact@BabaGyan.com">Contact@BabaGyan.com</a>!</p>
-]]></content:encoded><itunes:image href="/img/episode/sept.jpg"></itunes:image>
-          <googleplay:image href="/img/episode/sept.jpg"></googleplay:image><enclosure url="https://media.blubrry.com,/arresteddevops/content.blubrry.com/arresteddevops/" length="123" type="audio/mpeg" /><itunes:duration>01:02:22</itunes:duration><itunes:explicit>no</itunes:explicit>
+          <googleplay:image href="/img/episode/from-2019-to-2020.jpg"></googleplay:image><enclosure url="https://storage.googleapis.com/babagyan/01_Analytics%20On%20Air_Dhanesh_20200120.mp3" length="8158335" type="audio/mpeg" /><itunes:duration>00:07:22</itunes:duration><itunes:explicit>no</itunes:explicit>
           <googleplay:explicit>no</googleplay:explicit></item></channel>
 </rss>
