@@ -10,7 +10,7 @@
      xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
     >
   <channel>
-    <title>BabaGyan.com</title>
+    <title>Analytics on Air</title>
     <atom:link href="https://babagyan.com/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>/</link>
     <description>Analytics on Air podcast at BabaGyan.com - it has News and Podcast on Technology, Data Analytics, Data Science and Visualization. It is a place to listen to Analytics on Air podcast by Dhanesh where one learns about News from Analytics field, new technologies and share knowledge. You will learn about range of things from guests who have done it and know it.</description>
