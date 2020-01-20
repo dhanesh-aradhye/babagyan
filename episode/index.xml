@@ -39,6 +39,8 @@
     </image>
     <itunes:category text="Technology">
       <itunes:category text="Software How-To" /><itunes:category text="Tech News" /></itunes:category><generator>Hugo -- gohugo.io</generator>
+       <itunes:explicit>N</itunes:explicit>
+          <googleplay:explicit>N</googleplay:explicit>
         <item>
           <title>A Look at 2019 Analytics News Which Will Impact in 2020</title>
           <link>/a-look-at-2019-analytics-tech-news/</link>
