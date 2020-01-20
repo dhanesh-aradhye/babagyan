@@ -30,7 +30,8 @@
       <itunes:name>Dhanesh</itunes:name>
       <itunes:email>aradhye.dhanesh@gmail.com</itunes:email>
     </itunes:owner>
-    <itunes:image href="https://storage.googleapis.com/babagyan/profile.png" />
+    <itunes:image href="https://babagyan.com/img/profile.png"/>
+    <itunes:explicit>No</itunes:explicit>
     <googleplay:image href="https://babagyan.com/img/profile.png"></googleplay:image>
     <image>
       <url>https://babagyan.com/img/profile.png</url>
@@ -38,7 +39,6 @@
       <link>/</link>
     </image>
     <itunes:category text="Technology">
-    <itunes:explicit>No</itunes:explicit>
       <itunes:category text="Software How-To" /><itunes:category text="Tech News" /></itunes:category><generator>Hugo -- gohugo.io</generator>
         <item>
           <title>A Look at 2019 Analytics News Which Will Impact in 2020</title>
