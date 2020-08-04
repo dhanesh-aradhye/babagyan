@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Analytics on Air</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 03 Aug 2020 23:48:32 +0530</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 04:10:01 -0500</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,25 +14,16 @@
     <item>
       <title>analytics</title>
       <link>/categories/analytics/</link>
-      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
       <guid>/categories/analytics/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>linux</title>
-      <link>/categories/linux/</link>
-      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
-      
-      <guid>/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>technology</title>
       <link>/categories/technology/</link>
-      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
       <guid>/categories/technology/</guid>
       <description></description>

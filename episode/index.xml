@@ -14,7 +14,7 @@
     <atom:link href="/episode/index.xml" rel="self" type="application/rss+xml" />
     <link>/</link>
     <description>Analytics on Air podcast at BabaGyan.com - it has News and Podcast on Technology, Data Analytics, Data Science and Visualization. It is a place to listen to Analytics on Air podcast by Dhanesh where one learns about News from Analytics field, new technologies and share knowledge. You will learn about range of things from guests who have done it and know it.</description>
-    <lastBuildDate>Mon, 3 Aug 2020 23:48:32 &#43;0530</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 04:10:01 -0500</lastBuildDate>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <language>en-us</language>
@@ -39,26 +39,6 @@
     </image>
     <itunes:category text="Technology">
       <itunes:category text="Software How-To" /><itunes:category text="Tech News" /></itunes:category><generator>Hugo -- gohugo.io</generator>
-        <item>
-          <title>Various Linux Distributions and Their Uses</title>
-          <link>/checking-out-various-linux-distributions/</link>
-          <pubDate>Mon, 03 Aug 2020 23:48:32 +0530 </pubDate>
-          <dc:creator></dc:creator>
-          <guid>https://media.blubrry.com/analytics_on_air/storage.googleapis.com/babagyan/###.mp3</guid>
-          <itunes:author>
-            
-            
-              Dhanesh</itunes:author>
-          
-          <itunes:episode>2</itunes:episode>
-          
-        <itunes:title>Various Linux Distributions and Their Uses</itunes:title>
-        <itunes:summary>A look at various Linux distribution which you can use for various purposes.</itunes:summary>
-        <description>A look at various Linux distribution which you can use for various purposes.</description>
-        <googleplay:description>A look at various Linux distribution which you can use for various purposes.</googleplay:description>
-        <content:encoded><![CDATA[]]></content:encoded><itunes:image href="/img/episode/default.jpg"></itunes:image>
-          <googleplay:image href="/img/episode/default.jpg"></googleplay:image><enclosure url="https://media.blubrry.com/analytics_on_air/storage.googleapis.com/babagyan/###.mp3"  type="audio/mpeg" /><itunes:explicit>no</itunes:explicit>
-          <googleplay:explicit>no</googleplay:explicit></item>
         <item>
           <title>A Look at 2019 Analytics News Which Will Impact in 2020</title>
           <link>/a-look-at-2019-analytics-tech-news/</link>
