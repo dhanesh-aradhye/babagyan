@@ -6,10 +6,100 @@
     <description>Recent content in Tags on Analytics on Air</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2020 04:10:01 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 03 Aug 2020 23:48:32 +0530</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>centos7</title>
+      <link>/tags/centos7/</link>
+      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      
+      <guid>/tags/centos7/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>centos8</title>
+      <link>/tags/centos8/</link>
+      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      
+      <guid>/tags/centos8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debian</title>
+      <link>/tags/debian/</link>
+      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      
+      <guid>/tags/debian/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lubuntu</title>
+      <link>/tags/lubuntu/</link>
+      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      
+      <guid>/tags/lubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lxle</title>
+      <link>/tags/lxle/</link>
+      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      
+      <guid>/tags/lxle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>peppermint</title>
+      <link>/tags/peppermint/</link>
+      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      
+      <guid>/tags/peppermint/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proxmox</title>
+      <link>/tags/proxmox/</link>
+      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      
+      <guid>/tags/proxmox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slax</title>
+      <link>/tags/slax/</link>
+      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      
+      <guid>/tags/slax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>/tags/ubuntu/</link>
+      <pubDate>Mon, 03 Aug 2020 23:48:32 +0530</pubDate>
+      
+      <guid>/tags/ubuntu/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>acquisitions</title>

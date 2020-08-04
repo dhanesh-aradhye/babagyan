@@ -5,8 +5,7 @@
 <meta charset="utf-8">
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <meta name="description" content="Analytics is getting on interesting roads in year 2020 with some big news which came in 2019. Here we take a look at few select such news and talk about it.">
 
@@ -57,7 +56,19 @@
     <link rel="stylesheet" href="/custom.css">
 
 <link href=/css/all.css rel="stylesheet">
-
+<link href=/css/mediaelementplayer.min.css rel="stylesheet">
+<style>
+    .mejs__overlay-button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__overlay-loading-bg-img {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    .mejs__button > button {
+        background-image: url("/img/mejs-controls.svg");
+    }
+    </style>
+<link href=/css/speed.min.css rel="stylesheet">
 
 <meta name="theme-color" content="#a77ea9">
 
@@ -67,7 +78,6 @@
 
 
 <script data-ad-client="ca-pub-8274208900482192" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
 
 
 </head>
@@ -137,6 +147,7 @@
         
         
         
+        
       </ul>
   </div>
   </div>
@@ -163,14 +174,30 @@
         </div>
     <div class="row">
         <div class="col-md-12 player_row">
-          <audio src="https://media.blubrry.com/analytics_on_air/storage.googleapis.com/babagyan/01_Analytics%20On%20Air_Dhanesh_20200120.mp3" preload="auto"/>
+
+        <audio id="player2" style="width: 100%" controls preload="none">
+          <source src="https://media.blubrry.com/analytics_on_air/storage.googleapis.com/babagyan/01_Analytics%20On%20Air_Dhanesh_20200120.mp3" type="audio/mp3">
+          </audio>
+        </div>
+      </div><div class = "row youtube_row">
+      <div class = "col">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="//www.youtube.com/embed/OwxHZ6hAuKQ" allowfullscreen></iframe>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-11 col-md-offset-1">
-          <a href="https://media.blubrry.com/analytics_on_air/storage.googleapis.com/babagyan/01_Analytics%20On%20Air_Dhanesh_20200120.mp3">Direct Download</a>
+    </div><p>
+          
+          <button class="hide_transcript btn btn-secondary">Hide Transcript</button>
+          <button class="show_transcript btn btn-secondary">Display Transcript</button>
+          </p> 
+        <div class="row transcript">
+          <div class="col-md-12">
+            <h2>Transcript</h2>
+            Below show notes are exact transcripts, as presented by Dhanesh!!!
+          </div>
         </div>
-      </div><div class="row">
+
+  <div class="row">
     <div class="col">
       <h2>Show Notes</h2>
       <p>Welcome to first episode of my podcast series &ldquo;Analytics on air&rdquo;. Here, I will be talking about various topics from the field of Data Analytics including hot news, insights, interviews and product presentations and  tool evaluations.</p>
@@ -215,6 +242,8 @@ Licensed under Creative Commons: By Attribution 4.0 License
     </div>
   </div>
 
+
+
   
 
   
@@ -228,9 +257,13 @@ Licensed under Creative Commons: By Attribution 4.0 License
             <div class="col-md-3"><img alt="Dhanesh" src="/img/host/dhanesh.jpg" class="img-fluid" width="250px"></div>
             <div class="col-md-8">
               <h2><a href = "/host/dhanesh">Dhanesh</a></h2>
-              <p>Dhanesh is software engineer, data architect and an expert in BI Analytics field. He has deep understanding and inclination towards web and mobile technologies, and has curious nature towards world finance and news affecting it. He also has an unhealthy obsession with Doctor Who, Avengers, and other Marvel movies.</p>
-<a href="https://twitter.com/dh_nesh">
+              <p>Dhanesh is software engineer, data architect and an expert in BI Analytics field. He has deep understanding and inclination towards web and mobile technologies, and has curious nature towards world finance and news affecting it. He also has an unhealthy obsession with Doctor Who, Avengers, other Marvel and many more sci-fi movies.</p>
+<a href="https://BabaGyan.com">
+                  <i class="fas fa-home fa-2x"></i>
+                </a><a href="https://twitter.com/dh_nesh">
                   <i class="fab fa-twitter-square fa-2x"></i>
+                </a><a href="https://github.com/dhanesh-aradhye">
+                  <i class="fab fa-github-square fa-2x"></i>
                 </a><a href="https://www.linkedin.com/in/dhanesharadhye">
                   <i class="fab fa-linkedin fa-2x"></i>
                 </a><a href="https://www.instagram.com/dh_nesh">
@@ -248,6 +281,7 @@ Licensed under Creative Commons: By Attribution 4.0 License
       </div>
       
       
+
       <div class="row">
         
         <div class="col-md-12">
@@ -261,12 +295,12 @@ Licensed under Creative Commons: By Attribution 4.0 License
                 </li>
               
               
-                <li class="page-item disabled">
-                  <a href="#" class="page-link">Next
+                <li class="page-item">
+                  <a href="/checking-out-various-linux-distributions/" class="page-link">Next
                     <span aria-hidden="true">&rarr;</span>
                   </a>
                 </li>
-              
+                
             </ul>
           </nav>
         </div>
@@ -276,14 +310,22 @@ Licensed under Creative Commons: By Attribution 4.0 License
 </div> 
 <footer class="bg-secondary mt-2">
   <div class="section mt-2 ml-3">
-  <div class = "container bottom_container">
-  <div class="row">
+    <div class="container bottom_container">
+      <div class="row"> <br /> </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
+          <h6 class="text-light">Podcast and YouTube</h6>
+          <ul class="list-unstyled">
+            <a href="/"><img src="/img/profile.png" height="50" width="150"
+                alt="BabaGyan.com | Analytics on Air podcast | by Dhanesh" class="img-fluid"></a>
+          </ul>
+        </div>
         <div class="col-md-3 col-sm-6 mb-2 mb-md-0">
           <h6 class="text-light">
             <a href="/" class="text-light">
-            Analytics on Air
-            
+              Analytics on Air
               
+
             </a>
           </h6>
           <ul class="list-unstyled">
@@ -313,9 +355,11 @@ Licensed under Creative Commons: By Attribution 4.0 License
           <h6 class="text-light">Know more about</h6>
           <ul class="list-unstyled">
             
-            <li class="font-secondary text-light"><a href="/privacy-policy" class="text-light">Privacy policy</a></li>
+            <li class="font-secondary text-light"><a href="/privacy-policy"
+                class="text-light">Privacy policy</a></li>
             
-            <li class="font-secondary text-light"><a href="/terms-of-use" class="text-light">Terms of Use</a></li>
+            <li class="font-secondary text-light"><a href="/terms-of-use"
+                class="text-light">Terms of Use</a></li>
             
           </ul>
         </div>
@@ -323,23 +367,22 @@ Licensed under Creative Commons: By Attribution 4.0 License
       </div>
     </div>
 
-  <div class = "container bottom_container">
-  <div class="row">
-  <div class="col-md-12">
-      
-          <p class = "footer_copyright">Powered by Turtle Products and Solutions © 2013-2020</p>
-      
+    <div class="container bottom_container">
+      <div class="row">
+        <div class="col-md-12">
+          
+          <p class="footer_copyright">Powered by Turtle Products and Solutions © 2013-2020</p>
+          
 
 
-  </div>
-</div>
-</div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </footer>
 
 <script src=/js/castanet-min.js></script>
-<script src="/audiojs/audio.min.js"></script>
 <script>
     $("#share").jsSocials({
         shares: [
@@ -366,15 +409,38 @@ Licensed under Creative Commons: By Attribution 4.0 License
     ],
     });
 </script>
+
 <script>
-audiojs.events.ready(function() {
-  var as = audiojs.createAll({
-    imageLocation: '\/img\/player-graphics.gif',
-    retinaImageLocation: '\/img\/player-graphics@2x.gif',
-    swfLocation: '\/swf\/audiojs.swf'
+  $(document).ready(function() {
+
+    $('.transcript').hide();
+    $(".hide_transcript").hide();
+    $(".hide_transcript").click(function () {
+    $(".transcript").hide("fast");
+    $(".show_transcript").show();
+    $(".hide_transcript").hide();
    });
- });
+
+    $(".show_transcript").click(function () {
+    $(".transcript").show(500);
+    $(".hide_transcript").show();
+    $(".show_transcript").hide();
+   });
+
+  });
+
 </script>
+
+<script>
+  var player = new MediaElementPlayer('player2', {
+      features: ['playpause', 'current', 'progress', 'duration', 'volume','speed'],
+      defaultSpeed: 1.0,
+      
+  });
+</script>
+
+
+
 
 <script type="application/javascript">
 var doNotTrack = false;
@@ -386,6 +452,8 @@ if (!doNotTrack) {
 }
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
 
 
 <script>
@@ -411,7 +479,6 @@ if (!doNotTrack) {
     </script>
 
 
-
 </body>
-</html>
 
+</html>

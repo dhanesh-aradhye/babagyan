@@ -3,6 +3,96 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://babagyan.com/categories/analytics/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/categories/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/centos7/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/centos8/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/debian/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/episode/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/categories/linux/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/linux/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/lubuntu/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/lxle/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/peppermint/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/proxmox/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/slax/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/categories/technology/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/tags/ubuntu/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/checking-out-various-linux-distributions/</loc>
+    <lastmod>2020-08-03T23:48:32+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://babagyan.com/a-look-at-2019-analytics-tech-news/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
@@ -18,16 +108,6 @@
   </url>
   
   <url>
-    <loc>https://babagyan.com/categories/analytics/</loc>
-    <lastmod>2020-01-10T04:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://babagyan.com/</loc>
-    <lastmod>2020-01-10T04:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://babagyan.com/tags/aws/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
@@ -38,17 +118,7 @@
   </url>
   
   <url>
-    <loc>https://babagyan.com/categories/</loc>
-    <lastmod>2020-01-10T04:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://babagyan.com/tags/data-science/</loc>
-    <lastmod>2020-01-10T04:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://babagyan.com/episode/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
@@ -68,16 +138,6 @@
   </url>
   
   <url>
-    <loc>https://babagyan.com/tags/</loc>
-    <lastmod>2020-01-10T04:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://babagyan.com/categories/technology/</loc>
-    <lastmod>2020-01-10T04:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://babagyan.com/privacy-policy/</loc>
     <lastmod>2019-12-01T14:46:10+06:00</lastmod>
   </url>
@@ -85,11 +145,6 @@
   <url>
     <loc>https://babagyan.com/terms-of-use/</loc>
     <lastmod>2019-12-01T14:46:10+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://babagyan.com/guest/chernandez/</loc>
-    <lastmod>2017-06-10T09:12:42-05:00</lastmod>
   </url>
   
   <url>
