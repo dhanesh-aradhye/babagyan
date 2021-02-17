@@ -1,0 +1,335 @@
+/****  Color Reference chart ****
+
+Theme color rgba(128,100,162,1); 
+rgba(247,150,70,1);
+Transparent footer and header rgba(128,100,162,0.5);
+
+ */
+
+body {
+	margin-top: 50px;
+	margin-bottom: 30px;
+	height: 100%;
+    background-color: rgba(250,250,250,0.5);
+}
+
+.full {
+  background: url(../images/HTMLBG.JPG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar{
+background-color: rgba(250,250,250,0.75);
+font-size: 15px;
+}
+
+.navbar-inverse {
+border-color: #FFFFFF;
+border-top-color: rgba(128,100,162,1); /* theme color */
+/* border-bottom-color: #00FF00; */
+border-width: 4px;
+font-weight: bold;
+}
+
+.navbar-inverse .navbar-brand  {
+color: rgba(250,250,250,1); /* theme color */
+background-color: rgba(128,100,162,1);
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+color: rgba(250,250,250,1); /* theme color */
+background-color: rgba(128,100,162,1);
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #FFFFFF;
+  background-color: rgba(128,100,162,1); /* theme color */
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #FFFFFF;
+  background-color: rgba(128,100,162,1); /* theme color */
+}
+
+.navbar-toggle {
+  color: #FFFFFF;
+  background-color: rgba(128,100,162,1); /* theme color */
+}
+
+.img-circle {
+align: center;
+}
+
+#adsite1, #adsite2 {
+  color: #FFFFFF;
+  background-color: #DDCCDD;
+}
+
+.form-horizontal{
+padding: 10px 40px;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    background: rgba(250,250,250,0.75);
+    bottom: 0px;
+    right: 0px; 
+}
+
+.footerp > a {
+	color: rgba(128,100,162,1);
+	font-weight: bold;	
+}
+
+.myaboutlist {
+	color: rgba(255,255,255,1);
+}
+
+.myprofilelist {
+	color: rgba(255,255,255,1);
+}
+
+.myprofilelist > a {
+	color: rgba(255,255,255,1);
+}
+
+.myproductlist > a {
+	color: rgba(255,255,255,1);
+}
+
+.mycontactlist {
+	color: rgba(255,255,255,1);
+}
+
+.mycontactlist > a {
+	color: rgba(255,255,255,1);
+}
+
+h4, #row20, #row30, #row40, #row50, #row70, #row80 {
+ color: rgba(247,150,70,1);
+}
+
+#emptyspace {
+  height: 15px;
+}
+
+#row21, #row31, #row41, #row51 {
+min-height: 100%;
+overflow: hidden;
+}
+
+.myaboutinfo, .myprofileinfo, .mycontactinfo, .myproductinfo {
+	color: rgba(128,100,162,1);
+	margin:10px; 
+	padding:10px;
+	background-color: rgba(128,100,162,1);
+	margin-bottom: -9999px;
+	padding-bottom: 9999px;
+	box-shadow: 1px 1px 5px 1px black;
+    border-radius: 5px ;
+}
+
+.glyphicon {
+	font-weight: bold;
+	color: rgba(255,255,255,1);
+}
+
+.myaboutinfo > a, .myproductinfo > a {
+	font-weight: bold;
+	color: rgba(255,255,255,1);
+}
+
+.mycontactinfo > p > a {
+	font-weight: bold;
+}
+
+.myproductinfo {
+/*	use below if #row41 not included in overflow hidden
+	margin:10px; 
+	padding:10px;
+*/
+	color: rgba(255,255,255,1);
+}
+
+.stepstool {
+	font-size: 30px;
+	
+}
+#row60 {
+	margin-top:10px; 
+}
+
+.alert {
+	position:absolute;
+    z-index:1;
+	background-color: rgba(247,150,70,1);
+	color: rgba(255,255,255,1);
+}
+
+.alert > a {
+	color: rgba(128,100,162,1); 
+}
+
+.modal-body {
+	background-color: rgba(128,100,162,1); 
+	color: rgba(255,255,255,1);
+}
+
+.mytermsinfo {
+}
+
+.mytermslist {
+}
+
+#row60 {
+	background-color: rgba(128,100,162,1);
+}
+
+.myprofilebtn, .myprofilebtn:focus {
+    background: rgba(247,150,70,1);
+    border-radius:0;
+	color: rgba(255,255,255,1);
+}
+.myprofilebtn:hover {
+    background: rgba(255,255,255,1);
+    border-radius:0;
+	color: rgba(247,150,70,1);
+}
+
+.mycontactbtn, .mycontactbtn:focus {
+    background: rgba(128,100,162,1);
+    border-radius:0;
+	color: rgba(255,255,255,1);
+}
+.mycontactbtn:hover {
+    background: rgba(255,255,255,1);
+    border-radius:0;
+	color: rgba(128,100,162,1);
+}
+
+.myplanbtn, .myplanbtn:focus {
+    background: rgba(128,100,162,1);
+    border-radius:0;
+	color: rgba(255,255,255,1);
+}
+.myplanbtn:hover {
+    background: rgba(255,255,255,1);
+    border-radius:0;
+	color: rgba(128,100,162,1);
+}
+
+.mysubmitbtn, .mysubmitbtn:focus {
+    background: rgba(247,150,70,1);
+    border-radius:0;
+	color: rgba(255,255,255,1);
+	font-weight: bold;
+}
+.mysubmitbtn:hover {
+    background: rgba(255,255,255,1);
+    border-radius:0;
+	color: rgba(247,150,70,1);
+	font-weight: bold;
+}
+
+.mytablehead {
+	color: rgba(128,100,162,1);
+	background-color: rgba(255,255,255,1);
+	text-align: center;
+	font-weight: bold;
+}
+
+.mytablealter {
+	background-color: rgba(128,100,162,1);
+	color: rgba(255,255,255,1);
+	text-align: center;
+	font-weight: bold;
+}
+
+.totalhead {
+	text-align: left;
+}
+
+tr {
+	background-color: rgba(247,150,70,1);
+	color: rgba(255,255,255,1);
+	text-align: center;
+}
+
+td {
+	text-align: center;
+	font-weight: bold;
+}
+
+td > a,
+td > a:hover,
+td > a:focus {
+	color: rgba(128,100,162,1);
+}
+
+.info-sign-head {
+	color: rgba(128,100,162,1);
+}
+
+.info-sign-ft {
+	color: rgba(255,255,255,1);
+}
+
+/*** custom checkboxes start ***/
+
+/*the first method: Using 2 tags with predefined bootstrap icons*/
+
+input[type='checkbox'].tags-checkbox:checked + label > i:first-of-type,
+input[type='checkbox'].tags-checkbox + label > i:last-of-type{
+    display: none;
+}
+input[type='checkbox'].tags-checkbox:checked + label > i:last-of-type{
+    display: inline-block;
+}
+
+/*the second method - much cleaner look: Using 2 :pseudo classes from predefined bootstrap icons*/
+input[type='checkbox'].pseudo-checkbox + label:before,
+input[type='checkbox'].pseudo-checkbox + label:after{
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+input[type='checkbox'].pseudo-checkbox + label:before{/*unchecked icon*/
+    content: "\e157";
+}
+input[type='checkbox']:checked.pseudo-checkbox + label:before{/*checked icon*/
+    content: "\e067";
+}
+
+/*** custom checkboxes end ***/
+
+.strike01 {
+	color:rgba(128,100,162,0.5);
+}
+
+.strike02 {
+	color:rgba(247,150,70,0.5);
+}
+
+.mytermslist > a {
+	color: rgba(255,255,255,1);
+	font-weight: bold;	
+}
+
+.mytablealter > a, .mytablealter > a:hover, .mytablealter > a:focus {
+	color: rgba(255,255,255,1);
+	font-weight: bold;
+}

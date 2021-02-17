@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+	<link rel="author" href="https://plus.google.com/103656420801452265269"/>
+	<link rel="publisher" href="https://plus.google.com/113497864022889042631"/>
+
+	<title>Bigdata and Analytics - all posts | BabaGyan.com | Blog</title>
+    <meta name="description" content="Usage of Hadoop"/>
+
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="@baba_gyan"/>
+	<meta name="twitter:domain" content="BabaGyan"/>
+	<meta name="twitter:creator" content="@baba_gyan"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/babagyan.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+<script type="application/javascript">  <script type="text/javascript">  if (window.top !== window.self) { window.top.location = window.self.location; } </script> <script type="application/javascript"> var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;	 ga('create', 'UA-155045464-2', 'auto'); ga('send', 'pageview');} </script> <script async src='https://www.google-analytics.com/analytics.js'></script> </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation"	>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><< - Back to NEW Home</a>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <div class="container">
+
+<!-- Container 1 start -->
+<div class="container col-md-8">
+
+<!-- Jumbotron 1 start -->
+
+<div class="jumbotron" id="j1">
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="exploring-cloud-on-platform-google.html">Exploring Cloud platform on Google</a>
+	</h3>
+	<hr id="j1-hr">
+Exploring Cloud platform on Google requires us to enable billing in Google Cloud Console settings. However, Bitnami was free for an hour. Last time we looked at <a title="Bitnami and Ghost blog" href="babagyan-com-exploring-ghost-blogging-platform-on-bitnami.html" target="_blank">Bitmami cloud service and Ghost blog</a>. It has been a busy 8-10 weeks and mostly dealing with Google Cloud Platform (GCP).
+<br/><br/>
+Google Cloud has below products:
+<br/><br/>
+Google Compute Engine (GCE)
+<br/>
+Google App Engine (GAE)
+<br/>
+Google Cloud SQL
+<br/>
+Google Cloud Storage
+<br/>
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+Google Cloud Datastore
+<br/>
+Google BigQuery
+<br/>
+Google Cloud DNS
+<br/>
+Google Cloud Endpoints
+<br/>
+Google Translate API
+<br/>
+Google Prediction API
+<br/>
+Google Deployment Manager
+<br/>
+Google Cloud SDK
+<br/><br/>
+I have been creating Virtual Machines (VM) for own purposes on Bitnami, AWS, Google, etc. For this, I found that while Bitnami was absolutely easy to start with, Google was touch difficult. However, the amount and quality of documents available for Google was superb.
+<br/><br/>
+To create and manage a VM on Google, we need below resources:
+<br/><br/>
+Google Compute Engine (GCE)
+Local Unix/Linux system OR Windows system with Cygwin
+Python
+Google Cloud SDK
+VNC Viewer on local system
+<br/>
+<a href="00_04.png"><img class="alignleft size-full wp-image-771" alt="00" src="00_04.png" width="400" height="207" /></a>
+<br/><br/>
+To create a VM, navigate to <a title="Google Cloud Console" href="https://console.developers.google.com" target="_blank">https://console.developers.google.com</a>. There you will find "Compute Engine" on left navigation panel. Click open the Compute Engine and from each next sub-tabs, you can create a VM, add disk to it, take snapshots, write network rules, perform load balancing, etc.
+<br/><br/>
+Once the VM is up and running, you need to use GCUTIL from google cloud sdk to access the VM. You can the ssh into the vm and start VNC server. Once VNC server is up and running, you can easily access the VM's UI from VNC viewer and do additional activities that you want to perform.
+<br/>
+<img class="alignleft size-full wp-image-772" alt="01" src="01_04.png" width="400" height="207" />
+<br/><br/>
+Soon enough, we will probably look at Amazon Web Services. Then we can have enough things ready for a comparison of the Cloud compute service providers. If possible, we will look at few more providers.
+<br/><br/>
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="etl-bi-bigdata-past-and-future.html">ETL BI BigData Past Future</a>
+	</h3>
+	<hr id="j1-hr">
+ETL BI BigData Past Future
+<br/>
+<br/>
+Earlier, many a man years ago, there were only financial application that were used to perform transactions and log data into the database. Then came the applications to cater needs of Industries and hence begun the big volume data storage, backups and history in form of data. It was prominent even in case of financial applications, but not so visible because Financial firms were not as BIG as Industries.
+<br/>
+The applications for industry got the term such as ERP.
+<br/>
+Now, arise the question, why to store loads and loads of data? Can that be brought to some use? and How? This was the inception of Business Intelligence and an obvious process of Extraction Transformation and Loading (ETL).
+<br/><br/>
+This has, from a long time, resulted in many technologies and also jobs in the field of ETL and BI.
+<br/><br/>
+Now, after being a niche field for so many years, ETL + BI field has entered a transformation with addition of Big Data compliments.
+<br/>
+<!-- Collapse text from here -->
+<div class="collapse">
+<a href="00_09.jpg"><img class="alignleft size-medium wp-image-555" alt="00" src="00_09.jpg" width="153" height="300" /></a>
+<br/><br/>
+The transformation has been the result of many things - Internet, discovery of various data sources in various formats such as machine logs, social website data, network logs. Then, there has been huge progress in the field on in-memory database processing and cloud computing making analysis of unbelievably huge data possible.
+<br/><br/>
+What was ETL and Bi is now ETL + BI + BigData + Data Mining + Data Analytic + so on and on.....
+<br/><br/>
+Here is a list of technologies - incomplete list but a list never-the-less
+
+
+<br/>
+1. Technologies such as SAP BW (SAP NetWeaver Business Intelligence), SAP BO (SAP Business Objects/ Business Intelligence 4.0), Xcelsius, SAP HANA from ERP leaders SAP,
+<br/>
+2. Oracle reports, Oracle Business Intelligence, Oracle forms, Oracle WareHouse Builder from database leaders Oracle
+<br/>
+3. Infosphere DataStage, Cognos from mighty IBM
+<br/>
+4. SQL Server services - SSIS. SSRS. SSAS as a part of MSBI from Microsoft
+<br/>
+5. TeraData, SAS, Ab Initio, Microstrategy,
+<br/>
+6. Latest in the area - Tableau, QlikView, Spotfire (Tibco), Sybase IQ, Siebel,
+<br/>
+7. Technologies like R systems, Python, Php - all are also becoming a part of new form of ETL + BI + BigData
+<br/><br/>
+Soon, you will see some more projects demonstration on BabaGyan.com on BigData, Data Mining, Text Mining and many more. Stay tuned.
+<br/><br/>
+
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="types-data.html">Types of data</a>
+	</h3>
+	<hr id="j1-hr">
+Types of data
+<br/><br/>
+We so much talk about data all the time - do we all know in how many types data can be categorized based on its structure?
+<br/>
+I am trying to compile a similar categorization for data around which ETI, BI, BigData &amp; DataAnalytics have evolved
+<br/><br/>
+<strong>Structured data</strong>
+<br/>
+This is the base of all the database systems which have dominated the market of the ETL and BI industry for so many years. The structured data refers mainly to the relational database where all the key structures and associations are well defined and also all dimensional data is properly associated with facts.
+<br/><br/>
+<strong>Semi-structured data</strong>
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+<br/>
+Data in the form of excel sheets, presentations, etc which can be used as structured data to some extend for analysis but automation for direct access is not so easy. It basically would need to be somehow turned into structured data and then analysed.
+<br/><br/>
+<strong>Syndicated data</strong>
+<br/>
+Home away, Thompson Reuters, etc. which provide special data in their own formats for analysis are bucketed under the category of Syndicated data.
+<br/><br/>
+<strong>Unstructured data</strong>
+<br/>
+Logs from systems and devices, social media data such as twitter and facebook. Even though one may have a feel to turn this data into structured data for analysis, the volume and frequency of unstructured data makes it nearly impossible to be converted to structured data for analysis in terms of feasibility and impact. So, unstructured data is analysed using different methods and tools.
+<br/><br/>
+The one that will soon be published on BabaGyan.com uses Python and R language in combination with Php, MySql and HTML5 too.
+<br/><br/>
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="babagyan-com-exploring-ghost-blogging-platform-on-bitnami.html">BabaGyan.com Exploring Ghost Blogging platform on Bitnami</a>
+	</h3>
+	<hr id="j1-hr">
+<a title="BabaGyan.com" href="http://BabaGyan.com" target="_blank">BabaGyan.com</a> Exploring <a title="Ghost.org" href="https://ghost.org/" target="_blank">Ghost Blogging platform</a> on Bitnami. Ghost is free, open source blogging platform based on<a title="NodeJS" href="http://nodejs.org/" target="_blank"> Node.js</a>. It is maintained on Bitnami so I decided to visit bitnami and try it to post something on BabaGyan.com via Ghost. Simple review - Good to start :)
+<br/><br/>
+It was fun and project :)
+<br/><br/>
+Here are some screens:
+<br/><br/>
+This is the Editor
+<br/><br/>
+<a href="04_02.png"><img class="alignleft  wp-image-745" alt="Ghost Editor" src="04_02.png" width="400" height="324" /></a>
+
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+<a href="01_02.png"><img class="alignleft  wp-image-742" alt="Ghost Blog post for BabaGyan.com" src="01_02.png" width="400" height="324" /></a> 
+<a href="02_02.png"><img class="alignleft  wp-image-743" alt="Ghost user info for BabaGyan.com" src="02_02.png" width="400" height="324" /></a> 
+<a href="03_02.png"><img class="alignleft  wp-image-744" alt="Ghost Blog post for BabaGyan.com" src="03_02.png" width="400" height="324" /></a>
+
+<a href="00_02.png"><img class="alignleft size-full wp-image-741" alt="00" src="00_02.png" width="400" height="324" /></a>
+
+<br/><br/>
+
+
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Tag Cloud start -->
+
+<div class="container col-md-12">
+<ul class="nav nav-pills pull-right" id="tagcloud"> 
+<h3> <hr id="j1-hr"/> </h3>
+</ul>
+</div>
+
+<div class="container col-md-12" id="tagcloud">
+<ul class="nav nav-pills pull-center" id="tags"> 
+<a href="tag-hadoop.html" class="tag1">Hadoop</a>
+<a href="tag-msbi.html" class="tag2">MSBI</a>
+<a href="tag-etl-bi.html" class="tag3">ETL & BI</a>
+<a href="tag-bigdata.html" class="tag4">Bigdata</a>
+<a href="tag-reviews.html" class="tag5">Reviews</a>
+<a href="tag-case-study.html" class="tag6">Case Study</a>
+<a href="tag-others.html" class="tag10">Others</a>
+</ul>
+</div>	
+<!-- Tag Cloud end -->	
+
+</div>
+
+<!-- Jumbotron 1 end -->
+
+
+</div>
+
+<!-- Container 1 end -->
+
+<div class="jumbotron col-md-4" id="j2">
+	<h3>Also Read
+	</h3>
+<hr id="j2-hr"/>
+<ul class="list-inline" id="j2-side"> <li> <a title="BabaGyan.com | Blog Post" href="case-study-multiply-revenue-and-customer-base.html">Case Study: Multiply Revenue as well as Customer Base</a></li><li> <a title="BabaGyan.com | Blog Post" href="tool-project-tracker.html">Tool: Project Stages Tracker</a></li><li> <a title="BabaGyan.com | Blog Post" href="exploring-cloud-on-platform-google.html">Exploring Cloud platform on Google</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="babagyan-com-exploring-ghost-blogging-platform-on-bitnami.html">BabaGyan.com Exploring Ghost Blogging platform on Bitnami</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="solutions-issues-faced-hadoop-configuration.html">Solutions for issues faced during hadoop configuration</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-4.html">Hadoop and Ubuntu - step 4</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-3-set-up-ssh.html">Hadoop and Ubuntu - step 3</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-2-install-oracle-java.html">Hadoop and Ubuntu - step 2</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-1.html">Hadoop and Ubuntu - step 1</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="usage-hadoop.html">Usage of Hadoop</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-architecture-birdview.html">Hadoop architecture birdview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="pros-cons-gmail-displaying-images-emails.html">Pros and Cons of Gmail displaying images in your emails</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="clt20-2013-twitter-analysis.html">CLT20 2013 Twitter Analysis</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="etl-bi-bigdata-past-and-future.html">ETL BI BigData Past Future</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tool-daily-expense-tracker.html">Tool: Daily Expense Tracker</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ways-create-website.html">Lifesaver: Ways to create a website</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-business-intelligence-projects.html">LifeSaver: Business Intelligence Projects - Success and Failures</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-differences-between-udt-and-idt.html">LifeSaver: Differences between UDT and IDT</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="data-quality-in-etl-and-bi.html">Data Quality in ETL and BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="problem-solving-methodology.html">Problem Solving Methodology</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="what-is-mentoring.html">What is Mentoring</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-advantage.html">QlikView advantage over query based BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="types-data.html">Types of data</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lyrics-one-two-three-four-chennai-express.html">Lyrics One Two Three Four Chennai Express</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-licensing-an-overview.html">QlikView Licensing - an Overview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="baba-jee-ki-booti.html">Theme song lyrics - Baba jee ki booti</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tv-oled-led-lcd-plasma.html">TV - OLED vs LED vs LCD vs Plasma</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="review-google-moto-x.html">Review Google Moto X</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="blackberry-q10-q5-review.html">Review: Blackberry Q10 and Blackberry Q5</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-all-in-one.html">Lifesaver - SSRS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-all-in-one.html">Lifesaver - SSIS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssas-mdx-quick-fixes.html">Lifesaver - SSAS MDX Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-quick-fixes.html">Lifesaver - SSRS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-variables-script-profiling.html">SSIS Package Variables, Script and Profiling</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-quick-fixes.html">Lifesaver - SSIS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-containers.html">SSIS Control Flow Containers</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-objects.html">SSIS Control Flow Objects</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-05.html">SSIS Exercise 05</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-04.html">SSIS Exercise 04</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-03.html">SSIS Exercise 03</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-02.html">SSIS Exercise 02</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-01.html">SSIS Exercise 01</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-the-big-bang-theory.html">Theme song lyrics - The Big Bang Theory</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-friends.html">Theme song lyrics - F.R.I.E.N.D.S</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-aggregate-analytic-functions.html">SQL - Aggregate & Analytic functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="list-of-analytical-functions.html">SQL - List of Analytical functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-statement.html">SQL - Where, Operators and alias</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-structured-query-language-for-database-quering.html">SQL - Structured Query Language for Database quering</a>
+</li>
+</ul>
+</div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster 	-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/babagyan.js"></script>
+   <script src="../js/babagyan.js"></script>  <script> trackReferrer(); </script>  </body>
+</html>

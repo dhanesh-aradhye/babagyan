@@ -1,0 +1,1482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+	<link rel="author" href="https://plus.google.com/103656420801452265269"/>
+	<link rel="publisher" href="https://plus.google.com/113497864022889042631"/>
+
+	<title>MS BI - all posts | BabaGyan.com | Blog</title>
+    <meta name="description" content="Usage of Hadoop"/>
+
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="@baba_gyan"/>
+	<meta name="twitter:domain" content="BabaGyan"/>
+	<meta name="twitter:creator" content="@baba_gyan"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/babagyan.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+<script type="application/javascript">  <script type="text/javascript">  if (window.top !== window.self) { window.top.location = window.self.location; } </script> <script type="application/javascript"> var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;	 ga('create', 'UA-155045464-2', 'auto'); ga('send', 'pageview');} </script> <script async src='https://www.google-analytics.com/analytics.js'></script> </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation"	>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><< - Back to NEW Home</a>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <div class="container">
+
+<!-- Container 1 start -->
+<div class="container col-md-8">
+
+<!-- Jumbotron 1 start -->
+
+<div class="jumbotron" id="j1">
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-quick-fixes.html">Lifesaver - SSIS Quick fixes</a>
+	</h3>
+	<hr id="j1-hr">
+Lifesaver - SSIS Quick fixes
+
+Create a file name with today's date
+<br/><br/>
+Expression on Flat File or File Connection Manager:
+<br/>
+"C:\\SSISProject\\MySSISExport" + (DT_WSTR, 30)(DT_DBDATE)GETDATE() + ".csv"
+<br/>
+Output: C:\SSISProject\MySSISExport2013-07-24.csv
+
+<hr />
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+Use a 2 digit date (ex. "07" for March instead of "7")
+<br/><br/>
+RIGHT("0" + (DT_WSTR, 2)MONTH(GETDATE()),2)
+<br/>
+Expression Output: 03 (if the month is March)
+
+<hr />
+
+Multiple condition if statement
+<br/><br/>
+Say, we have a requirement where the a statement is needs to determine whether a column name is blank/NULL. If yes then should be set to unknown.
+<br/>
+To make a Logical AND condition, use "&amp;&amp;" instead of the "||" operator.
+<br/>
+ISNULL(ColumnName)||TRIM(ColumnName)==""?"Unknown": ColumnName
+
+<hr />
+
+Returns the first five characters from a zip code
+<br/><br/>
+Derived Column Transform in the Data Flow:
+<br/>
+SUBSTRING(ZipCodePlus4,1,5)
+
+<hr />
+
+Remove a given character from a string (ex. Remove "-" from a social security number)
+<br/><br/>
+Derived Column Transform in the Data Flow:
+<br/>
+REPLACE(SocialSecurityNumber, "-","")
+
+<hr />
+
+Uppercase data
+<br/><br/>
+Derived Column Transfrom in the Data Flow:
+<br/>
+UPPER(ColumnName)
+
+<hr />
+
+Replace NULL with another value
+<br/><br/>
+Derived Column Transform in the Data flow:
+<br/>
+ISNULL(ColumnName)?"New Value" : ColumnName
+
+<hr />
+
+Remove any non-numeric data from a column
+<br/><br/>
+Script Transform in the Data Flow Task with the code as follows (VB 2008):
+<br/>
+Imports System.Text.RegularExpressions
+<br/>
+Public Overrides Sub Input()_ProcessInputRows(ByVal Row As Input()Buffer)
+<br/>
+If Row.ColumnName_IsNull = False Or Row.ColumnName = "" Then
+<br/>
+Dim pattern As String = String.Empty
+<br/>
+Dim r As Regex = Nothing
+<br/>
+pattern = "[^0-9]"
+<br/>
+r = New Regex(pattern, RegexOptions.Compiled)
+<br/>
+Row.ColumnName = Regex.Replace(Row.ColumnName, pattern, "")
+<br/>
+End If
+<br/>
+End Sub
+
+<hr />
+
+Replace blanks with NULL values
+<br/><br/>
+Derived Column Transform in the Data Flow:
+<br/>
+TRIM(ColumnName)=="" ? (DT_STR, 4, 1252)NULL(DT_STR, 4, 1252) : ColumnName
+
+<hr />
+
+Convert text to InitCap,i.e, 1st letter in each word is uppercase
+<br/><br/>
+Script Transform with the line of partial code as follows:
+<br/>
+Row.OutputName = StrConv(Row.InputName, VBStrConv.ProperCase)
+
+<hr />
+
+Build dynamic SQL statement
+<br/><br/>
+Expression on the SQLStatementSource property of Execute SQL Task:
+<br/>
+"SELECT Column From " + @[User::TableName] +WHERE
+<br/>
+DateFilterColumn = '" + (DT_WSTR,4)YEAR(@
+<br/>
+[User::DateTimeVar]) + RIGHT("0" + (DT_WSTR,2)MONTH(@
+<br/>
+[User::DateTimeVar]),2) + RIGHT("0" + (DT_WSTR,2)DAY(@
+<br/>
+[User::DateTimeVar]),2) + "'"
+
+<hr />
+
+Round to the nearest two decimal mark
+<br/><br/>
+Expression on Derived Column Transform:
+<br/>
+ROUND(YourNumber, 2)
+<br/>
+Expression Output Example: 1.2600000
+<br/><br/>
+
+
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-quick-fixes.html">Lifesaver - SSRS Quick Fixes </a>
+	</h3>
+	<hr id="j1-hr">
+Lifesaver - SSRS Quick fixes
+<br/>
+<br/>
+Return first day of current Week
+(Default Start Date parameter to return WTD)
+<br/><br/>
+Expression on the parameter default value:
+<br/>
+=DateAdd("d",-DatePart(DateInterval.WeekDay,Today,0,0)+1,Today)
+<br/>
+Output: 14/7/2013 12:00:00 AM
+
+<hr />
+
+Return first day of current Month
+(Default Start Date parameter to return MTD)
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+
+<br/><br/>
+Expression on the parameter default value:
+<br/>
+=DateAdd("d",-(Day(today)-1), Today)
+<br/>
+or
+<br/>
+=DateSerial( year(today()), month(today()), 1)
+<br/>
+Output:11/1/2010 12:00:00 AM
+<hr/>
+Return first day of current year
+(Default Start Date parameter to return YTD)
+<br/><br/>
+
+Expression on the parameter default value:
+<br/>
+=DateAdd("d",-DatePart(DateInterval.DayOfYear,Today,0,0)+1,Today)
+<br/>
+Output: 1/1/2010 12:00:00 AM
+
+<hr />
+
+Return period over period (Default date parameters to a rolling year)
+<br/><br/>
+Expression on the parameter default value:
+<br/>
+Week over Week
+<br/>
+=DateAdd("ww",-1, Today)
+<br/>
+Month over Month
+<br/>
+=DateAdd("m",-1,Today)
+<br/>
+Year over Year
+<br/>
+=DateAdd("yyyy",-1, Today)
+<br/>
+Output:10/9/2010 12:00:00 AM
+
+<hr />
+
+Return current month name
+<br/><br/>
+Expression in Text Box:
+<br/>
+=MonthName(Month(Today()))
+<br/>
+Output:July
+
+<hr />
+
+Uppercase fields
+<br/><br/>
+Expression in Text Box:
+<br/>
+=UCASE(Fields!FieldName.Value)
+<br/>
+Output:UPPERCASE
+
+<hr />
+
+Convert text to proper case or InitCap
+(1st letter in each word is uppercase)
+<br/><br/>
+Expression in Text Box:
+<br/>
+=StrConv(Fields!FieldName.Value, VbStrConv.ProperCase)
+
+<hr />
+
+Replace NULL with another value Expression in Text Box:
+<br/><br/>
+=iif(Fields!FieldName.Value = nothing, "No Value",Fields! FieldName.Value)
+<br/>
+Alternating row color (Banding effect) BackgroundColor property on Text Box:
+<br/>
+=iif(RowNumber(Nothing) Mod 2 = 0, "Silver", "White")
+
+<hr />
+
+Handling division by zero
+<br/><br/>
+Expression in Text Box:
+<br/>
+=iif(Fields!DenominatorField.Value = 0, 0, Fields!NumeratorField.Value/
+iif(Fields!DenominatorField.Value = 0, 1, Fields! DenominatorField.Value))
+
+<hr />
+
+security number
+<br/><br/>
+Expression in Text Box:
+<br/>
+=Replace(Fields!EmailAddress.Value,"-","")
+
+<br/><br/>
+
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="lifesaver-ssas-mdx-quick-fixes.html">Lifesaver - SSAS MDX Quick fixes</a>
+	</h3>
+	<hr id="j1-hr">
+Lifesaver - SSAS MDX Quick fixes
+Simple Gross Profit Calculation
+<br/><br/>
+[Measures].[Sales Amount] - [Measures].[Total Product Cost]
+<br/>
+Sales in the USA
+<br/>
+([Measures].[Sales Amount], [Customer].[Country].&amp;[United States])
+<hr>
+Year to Date Sales (Works for any level of Date Hiearchy)
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+<br/><br/>
+Aggregate(
+PeriodsToDate( [Date].[Calendar Hierarchy].[Year],
+[Date].[Calendar Hierarchy].CurrentMember ),
+([Measures].[Sales]))
+<hr>
+Alternate Year To Date Expression (YTD, QTD, MTD)
+<br/><br/>
+AGGREGATE (
+YTD ([Date Order].[Calendar].CurrentMember),
+Measures.[Sales Amount])
+<hr>
+Product Ranking
+<br/><br/>
+IIF (Product.Product.CurrentMember IS Product.Product.[All],NULL,
+<br/>
+IIF (Measures.[Sales Amount] = 0, NULL,
+<br/>
+RANK(Product.Product.CurrentMember, ORDER (Product.Product.Members, Measures.[Sales Amount]))))
+<hr>
+Sales from 365 Days Ago
+<br/><br/>
+(ParallelPeriod([Invoice Date].[Date Hierarchy].[Date], 365, [Invoice Date].[Date Hierarchy].CurrentMember), [Measures].[Sales Amount])
+<hr>
+Sales in the Previous Period
+<br/><br/>
+(Measures.[Sales Amount], [Date Order].[Calendar].CurrentMember.PrevMember)
+<hr>
+Top 10 Selling Products (Named Set)
+<br/><br/>
+TopCount (Product.Product.Product.Members,10,Measures.[Sales Amount])
+<hr>
+Three Years Average Sales From NOW()
+<br/><br/>
+Avg(
+<br/>
+{ParallelPeriod( [Date].[Date].[Year], 3,
+<br/>
+StrToMember("[Date].[Date].&amp;[" + Format(now(), "yyyyMMdd") + "]")) :
+<br/>
+StrToMember("[Date].[Date].&amp;[" + Format(now(), "yyyyMMdd") + "]")} , [Measures].[Sales Count])
+<br/>
+Drillthrough Action Caption 'Get Sales Details for'
+<br/>
++[Product].[Product].CurrentMember.Member_Caption
+<hr>
+Change SSAS Calculation Text color
+<br/><br/>
+IIF([Measures].[Profit Percentage] &lt; .40, 255 , 0)
+<hr>
+Changing a Calculation with a SCOPE statement
+<br/><br/>
+SCOPE ([Measures].[Scope Profit]);
+<br/>
+THIS = ([Measures].[Sales Amount] - [Measures].[Standard Product Cost]);
+<br/>
+END SCOPE;
+<hr>
+Clear Ration Value when at all level
+<br/><br/>
+SCOPE ([Customer].[Customer Geography].[All], Measures.RatioOverParent);
+<br/>
+THIS = NULL
+<hr>
+SSAS KPI Value Expression
+<br/><br/>
+[Measures].[Sales Amount] * 1.2
+<hr>
+SSAS KPI Goal Expression
+<br/><br/>
+Case
+<br/>
+When IsEmpty
+(ParallelPeriod
+([Date Order].[Fiscal].[Fiscal Year],
+1,[Date Order].[Fiscal].CurrentMember))
+<br/>
+Then [Measures].[Sales Amount]
+<br/>
+Else 1.10 *
+([Measures].[Sales Amount],
+ParallelPeriod([Date Order].[Fiscal].[Fiscal Year],
+1,[Date Order].[Fiscal].CurrentMember))
+<br/>
+End
+<hr>
+SSAS KPI Status Expression
+<br/><br/>
+Case
+<br/>
+When KpiValue( "Sales Revenue YTD" ) / KpiGoal( "Sales RevenueYTD" ) &gt; 1
+<br/>
+Then 1
+<br/>
+When KpiValue( "Sales Revenue YTD" ) / KpiGoal( "Sales Revenue YTD" ) &lt;= 1
+And
+KpiValue( "Sales Revenue YTD" ) / KpiGoal( "Sales Revenue YTD" ) &gt;= .85
+<br/>
+Then 0
+<br/>
+Else -1
+<br/>
+End
+<hr>
+SSAS KPI Trend Expression
+<br/><br/>
+Case
+<br/>
+When IsEmpty
+(ParallelPeriod
+([Date Order].[Fiscal].[Fiscal Year],
+1,[Date Order].[Fiscal].CurrentMember))
+<br/>
+Then 0
+<br/>
+When VBA!Abs
+((KpiValue( "Sales Revenue YTD" )- (KpiValue( "Sales Revenue YTD" ),
+ParallelPeriod( [Date Order].[Fiscal].[Fiscal Year],
+1, [Date Order].[Fiscal].CurrentMember)))
+/(KpiValue( "Sales Revenue YTD" ),
+ParallelPeriod
+( [Date Order].[Fiscal].[Fiscal Year],
+1,[Date Order].[Fiscal].CurrentMember))) &lt;=.02
+<br/>
+Then 0
+<br/>
+When (KpiValue( "Sales Revenue YTD" )- (KpiValue( "Sales Revenue YTD" ),
+ParallelPeriod
+( [Date Order].[Fiscal].[Fiscal Year], 1,
+[Date Order].[Fiscal].CurrentMember)))
+/(KpiValue( "Sales Revenue YTD" ),
+ParallelPeriod( [Date Order].[Fiscal].[Fiscal Year],1,[Date Order].[Fiscal].CurrentMember)) &gt;.02
+<br/>
+Then 1
+<br/>
+Else -1
+<br/>
+End
+<br/><br/>
+
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+<a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-all-in-one.html">Lifesaver - SSIS All in one</a>
+	</h3>
+	<hr id="j1-hr">
+Lifesaver - SSIS All in one
+
+<br/><br/><strong>SSIS</strong><br/>
+SQL Server Integration Services
+<br/><br/><strong>Description</strong><br/>
+SQL Server Integration Services (SSIS) is a component of SQL Server which can be used to perform a wide range of Data Migration and ETL operations. SSIS is a component in MSBI process of SQL Server.
+This is a platform for Integration and Workflow applications. It is known for a fast and flexible OLTP and OLAP extensions used for data extraction, transformation, and loading (ETL). 
+<br/>
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+The tool may also be used to automate maintenance of SQL Server databases and multidimensional data sets.
+<br/><br/><strong>Tools</strong><br/>
+Business Intelligence Development Studio (BIDS) for Development of SSIS Projects
+SQL Server Management Studio (SSMS) to manage the SSIS Packages and Projects
+<br/><br/><strong>SSIS workflow</strong><br/>
+Workflow is a set of instructions to specify how to execute tasks and containers within SSIS Packages
+<br/><br/><strong>Control flow</strong><br/>
+Control flow contains one or more tasks &amp; containers that execute when the package runs.
+<br/>
+Control order or define the conditions for running the next task or container in the package control flow, we use precedence constraints to connect the tasks and containers in a package.
+<br/>
+A subset of tasks and containers can also be grouped and run repeatedly as a unit within the package control flow.
+<br/><br/><strong>Data flow</strong><br/>
+Data flow contains the sources and destinations that extract and load data, the transformations that modify and extend data, and the paths that link sources, transformations, and destinations
+<br/>
+Data Flow task is the executable within the SSIS package that creates, orders, and runs the data flow.
+<br/>
+Separate instance of the data flow engine is opened for each Data Flow task in a package.
+<br/><br/><strong>Categories in the Data Flow</strong><br/>
+Data Sources, Transformations, and Data Destinations.
+<br/><br/><strong>Errors</strong><br/>
+
+-Data Connection Errors - occur incase the connection manager cannot be initialized with the connection string.
+This applies to both Data Sources and Data Destinations along with Control Flows that use the Connection Strings.
+<br/>
+-Data Transformation Errors - occur while data is being transformed over a Data Pipeline from Source to Destination.
+<br/>
+-Expression Evaluation errors - occur if expressions that are evaluated at run time perform invalid
+<br/><br/><strong>Environment variable</strong><br/>
+
+An environment variable configuration sets a package property equal to the value in an environment variable.
+<br/>
+For configuring properties that are dependent on the computer that is executing the package.
+<br/><br/><strong>Transformations available</strong><br/>
+
+AGGEGATE - It applies aggregate functions to Record Sets to produce new output records from aggregated values.
+<br/>
+AUDIT - Adds Package and Task level Metadata - such as Machine Name, Execution Instance, Package Name, Package ID, etc..
+<br/>
+CHARACTER MAP - Performs SQL Server level makes string data changes such as changing data from lower case to upper case.
+<br/>
+CONDITIONAL SPLIT – Separates available input into separate output pipelines based on Boolean Expressions configured for each output.
+<br/>
+COPY COLUMN - Add a copy of column to the output we can later transform the copy keeping the original for auditing.
+<br/>
+DATA CONVERSION - Converts columns data types from one to another type. It stands for Explicit Column Conversion.
+<br/>
+DATA MINING QUERY – Used to perform data mining query against analysis services and manage Predictions Graphs and Controls.
+<br/>
+DERIVED COLUMN - Create a new (computed) column from given expressions.
+<br/>
+EXPORT COLUMN – Used to export a Image specific column from the database to a flat file.
+<br/>
+FUZZY GROUPING – Used for data cleansing by finding rows that are likely duplicates.
+<br/>
+FUZZY LOOKUP - Used for Pattern Matching and Ranking based on fuzzy logic.
+<br/>
+IMPORT COLUMN - Reads image specific column from database onto a flat file.
+<br/>
+LOOKUP - Performs the lookup (searching) of a given reference object set against a data source. It is used for exact matches only.
+<br/>
+MERGE - Merges two sorted data sets into a single data set into a single data flow.
+<br/>
+MERGE JOIN - Merges two data sets into a single dataset using a join junction.
+<br/>
+MULTI CAST - Sends a copy of supplied Data Source onto multiple Destinations.
+<br/>
+ROW COUNT - Stores the resulting row count from the data flow / transformation into a variable.
+<br/>
+ROW SAMPLING - Captures sample data by using a row count of the total rows in dataflow specified by rows or percentage.
+<br/>
+UNION ALL - Merge multiple data sets into a single dataset.
+<br/>
+PIVOT – Used for Normalization of data sources to reduce analomolies by converting rows into columns
+<br/>
+UNPIVOT – Used for demoralizing the data structure by converts columns into rows incase of building Data Warehouses.
+<br/><br/><strong>Logs</strong><br/>
+Logging features writes log entries when run-time events occur and can also write custom messages. This is not enabled by default.
+<br/>
+Integration Services supports a diverse set of log providers, and gives you the ability to create custom log providers.
+<br/>
+The Integration Services log providers can write log entries to text files, SQL Server Profiler, SQL Server, Windows Event Log, or XML files.
+<br/>
+Logs are associated with packages and are configured at the package level.
+<br/>
+Each task or container in a package can log information to any package log.
+<br/>
+The tasks and containers in a package can be enabled for logging even if the package is not logging.
+<br/><br/><strong>Deploy packages</strong><br/>
+
+BUILDing SSIS Projects generates a Deployment Manifest File.
+<br/>
+Run the manifest file and decide whether to deploy this onto File System or onto SQL Server [ msdb].
+<br/>
+SQL Server Deployment is very faster and more secure then File System Deployment.
+<br/>
+Alternatively, import the package from SSMS from File System or SQ Server.
+<br/><br/><strong>Variables &amp; variable scope</strong><br/>
+
+Variables store values that a SSIS package and its containers, tasks, and event handlers can use at run time.
+<br/>
+The scripts in the Script task and the Script component can also use variables.
+<br/>
+The precedence constraints that sequence tasks and containers into a workflow can use variables when their constraint definitions include expressions.
+<br/><br/><strong>Perfmon counterd</strong><br/>
+SQLServer:SSIS Service
+<br/>
+SSIS Package Instances
+<br/>
+SQLServer:SSIS Pipeline
+<br/>
+BLOB bytes read
+<br/>
+BLOB bytes written
+<br/>
+BLOB files in use
+<br/>
+Buffer memory
+<br/>
+Buffers in use
+<br/>
+Buffers spooled
+<br/>
+Flat buffer memory
+<br/>
+Flat buffers in use
+<br/>
+Private buffer memory
+<br/>
+Private buffers in use
+<br/>
+Rows read
+<br/>
+Rows written
+<br/><br/>
+
+
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-all-in-one.html">Lifesaver - SSRS All in one</a>
+	</h3>
+	<hr id="j1-hr">
+Lifesaver - SSRS All in one
+<br/><br/>
+<strong>SSRS</strong>
+
+SQL Server Reporting Services
+<br/><br/>
+<strong>Description</strong>
+<br/><br/>
+SQL Server Reporting Service is one of the server-based software systems that generate reports developed by Microsoft. It is used for preparing and delivering interactive and variety of printed reports. It is administered through an interface that is web based. 
+<br/>
+Reporting services utilizes a web service interface for supporting and developing of customized reporting applications. It can be competed with Crystal Reports and other business intelligent tools.
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+<br/><br/>
+<strong>SSRS Architecture</strong>
+<br/><br/>
+Reporting services architecture is comprises of integrated components. It is multi-tiered, included with application, server and data layers. This architecture is scalable and modular.
+A single installation can be used across multiple computers.
+<br/><br/>
+<strong>Components</strong>
+<br/><br/>
+Report Manager
+<br/>
+Reporting Designer
+<br/>
+Browser Types Supported by Report Manager
+<br/>
+Report server
+<br/>
+Report server command line utilities
+<br/>
+Report Server Database
+<br/>
+Reporting Services Extensibility
+<br/>
+Data sources that is supported by Reporting Services
+<br/><br/>
+<strong>Reporting Life Cycle</strong>
+<br/><br/>
+Report designing – The designing is done in Visual Studio Report Designer. Generates a class which embodies the Report Definition.
+<br/>
+Report processing – The processing includes binging the report definition with data from the report data source. It performs on all grouping, sorting and filtering calculations. The expressions are evaluated except the page header, footer and section items. Later it fires the Binding event and Bound event.
+<br/>
+As a result of the processing, it produces Report Instance.
+<br/>
+Report instance may be persisted and stored which can be rendered at a later point of time.
+<br/>
+Report Rendering - Report rendering starts by passing the Report Instance to a specific rendering extension (HTML or PDF formats). The instance of reports is paged if paging supported by output format. The expressions of items are evaluated in the page header and footer sections for every page. As a final step, the report is rendered to the specific output document.
+<br/><br/>
+<strong>Data Driven Subscriptions</strong>
+<br/><br/>
+Reporting Services provides data-driven subscriptions so that you can customize the distribution of a report based on dynamic subscriber data.
+<br/>
+Data-driven subscriptions are intended for:
+<br/>
+1. Distributing reports to a large recipient pool whose membership may change from one distribution to the next. For example distribute a monthly report to all current customers.
+<br/>
+2. Distributing reports to a specific group of recipients based on predefined criteria. For example send a sales performance report to the top ten sales managers in an organization.
+<br/><br/>
+<strong>Logical Page and Physical Page in SSRS</strong>
+<br/><br/>
+Logical page breaks are page breaks that you insert before or after report items or groups.
+<br/>
+Page breaks help to determine how the content is fitted to a report page for optimal viewing when rendering or exporting the report.
+<br/>
+Logical page breaks are ignored for report items that are constantly hidden and for report items where the visibility is controlled by clicking another report item.
+<br/>
+Logical page breaks are applied on conditionally visible items if they are currently visible at the time the report is rendered.
+<br/>
+Space is preserved between the report item with the logical page break and its peer report items.
+<br/>
+Logical page breaks that are inserted before a report item push the report item down to the next page. The report item is rendered at the top of the next page.
+<br/>
+Logical page breaks defined on items in table or matrix cells are not kept. This does not apply to items in lists.
+<br/><br/>
+<strong>Use Null Data driven Subscription</strong>
+<br/><br/>
+When you specify the Null Delivery Provider as the method of delivery in the subscription, the report server targets the report server database as the delivery destination and uses a specialized rendering extension called the null rendering extension.
+<br/>
+In contrast with other delivery extensions, the Null Delivery Provider does not have delivery settings that you can configure through a subscription definition.
+<br/><br/>
+<strong>Report manager</strong>
+<br/><br/>
+Report manager is a web application accessed by a URL. The interface of this Report manager depends on the permissions of the user. This means to access any functionality or perform any task, the user must be assigned a role. A user with a role of full permissions can entire all the features and menus of the report.
+<br/><br/>
+<strong>Reporting Services components</strong>
+<br/><br/>
+Reporting services components assist in development. These processing components include some tools that are used to create, manage and view reports. A report designer is used to create the reports. a report sever is used to execute and distribute reports. a report manager is used to manage the report server.
+<br/><br/>
+<strong>Report Builder</strong>
+<br/><br/>
+Report Builder is a business-user, ad-hoc report design client that allows users to design reports based on the business terms (Report Builder model) they are familiar with, but without needing to understand database schemas or how to write SQL or MDX queries. Report Builder works with both SQL Server and Analysis Services data sources.
+<br/><br/>
+<strong>Import Microsoft Excel data to SSRS</strong>
+<br/><br/>
+Reporting Services does not import data. It only queries data in whatever format it is stored in their native storage system. I will assume that you're asking whether you can create reports and use Excel spreadsheets as data sources. The answer is Yes, Reporting Services supports a wide variety of data sources, including Excel files. You'll get the best performance with the built-in native .NET providers but you should be able to connect to any ODBC or OLE-DB data source, whether it comes from Microsoft or a third-party company.
+<br/><br/>
+<strong>Deploy SSRS reports on personal website</strong>
+<br/><br/>
+Reports can only be deployed on a reporting services site. Your only option for viewing them from other sites is an HTTP link. 
+<br/>
+Some tools, like SharePoint offer controls allowing you to view reports in the context of the other websites, but the report is still deployed to and hosted from reporting services.
+<br/><br/>
+
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="ssis-exercise-01.html">SSIS Exercise 01</a>
+	</h3>
+	<hr id="j1-hr">
+SSIS Exercise 01
+<br/><br/>
+Create SSIS packages and Data sources
+<br/><br/>
+We will create a new SSIS project and then work with a couple of SSIS packages by adding data sources and connections.
+<br/>
+Start SQL Server Business Intelligence Development Studio (BIDS), by clicking the Start button and then selecting All Programs, Microsoft SQL Server 2008, SQL Server Business Intelligence Development Studio.
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+<br/>
+<a href="01.jpg"><img class="alignnone size-medium wp-image-107" alt="01" src="01.jpg" width="300" height="219" /></a>
+<br/><br/>
+Choose New, Project from the File menu. (If you have Visual Studio 2008 installed separately from BIDS, simply choose New Project from the File menu.) 
+<br/>
+The New Project dialog box displays all the installed templates for Microsoft Visual Studio, including the Business Intelligence Projects templates.
+<br/>
+In the New Project dialog box, confirm that Business Intelligence Projects is selected in the Project Types area, and then in the Templates area, select the Integration Services Project template.
+<br/>
+Near the bottom of the New Project dialog box, in the Name box, type "SSIS Project" as the name of your SSIS project. Click OK to have BIDS create the new SSIS project.
+<br/>
+<img class="alignnone size-medium wp-image-109" alt="03" src="03-300x156.jpg" width="300" height="156" />
+<br/><br/>
+When the project is created, SSIS automatically creates a new SSIS package named Package.dtsx and opens it in the SSIS Designer. In Solution Explorer, right-click Package.dtsx, and then click Rename. 
+<br/><br/>
+<img class="alignnone size-medium wp-image-110" alt="04" src="04-300x135.jpg" width="300" height="135" />
+<br/>
+Rename the package by typing .dtsx. BIDS might prompt you to rename the package object. 
+<br/>
+If a message box appears that prompts you to rename the package object as well, click Yes. Always click Yes if you are prompted to change the package object when renaming a package because this updates the internal name of the package.
+<br/>
+<img class="alignnone size-medium wp-image-111" alt="05" src="05-300x58.jpg" width="300" height="58" />
+<br/><br/>
+Click the Save button on the toolbar, and then close the package by clicking the Close button in the upper-right corner of the SSIS Designer.
+<br/><br/>
+To create a new package, right-click the SSIS Packages folder in Solution Explorer, and then click New SSIS Package. This creates a new package object named Package1.dtsx (the number depends on how many packages you have created) in the SSIS Packages folder in Solution Explorer.
+<br/>
+<a href="06.jpg"><img class="alignnone size-medium wp-image-112" alt="06" src="06.jpg" width="215" height="300" /></a>
+<br/><br/>
+To rename the new package, right-click the package, and then click Rename. Rename the package to DimCustomer.dtsx because this package will contain logic to process the customer dimension table. When prompted, click Yes to rename the package object.
+<br/>
+<a href="07.jpg"><img class="alignnone size-medium wp-image-113" alt="07" src="07.jpg" width="213" height="300" /></a>
+<br/><br/>
+Following the same steps, create one more package in your SSIS Project named DimPromotion.dtsx.
+<br/>
+<a href="08.jpg"><img class="alignnone size-medium wp-image-114" alt="08" src="08.jpg" width="212" height="300" /></a>
+
+<br/><br/>
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="ssis-exercise-02.html">SSIS Exercise 02</a>
+	</h3>
+	<hr id="j1-hr">
+SSIS Exercise 02
+<br/><br/>
+Create SSIS packages and Data sources
+<br/>
+We will create two project data sources, which will be used in your packages as the source and the destination.
+<br/>
+Start SQL Server Business Intelligence Development Studio (BIDS), open the project you created in Exercise 1, SSIS Project, and then open Solution Explorer (if it is not already displayed). 
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+<br/>
+You can open Solution Explorer by clicking the Solution Explorer button on the Standard toolbar.
+<br/>
+In Solution Explorer, right-click the Data Sources folder, and then click New Data Source. When the Welcome page of the Data Source Wizard appears, click Next.
+<br/>
+<a href="011.jpg"><img class="alignnone size-medium wp-image-121" alt="01" src="011.jpg" width="204" height="300" />
+<br/>
+</a> <a href="02.jpg"><img class="alignnone size-medium wp-image-122" alt="02" src="02.jpg" width="300" height="271" /></a>
+<br/><br/>
+On the Select How To Define The Connection page, select Create A Data Source Based On An Existing Or New Connection.
+<br/>
+Click New to open the Connection Manager dialog box.
+<br/>
+In the Provider drop-down list, select the Native OLE DB\SQL Server Native Client 10 provider and click OK. Type (local) in the Server Name field.
+<br/>
+In the Select Or Enter A Database Name drop-down list, select AdventureWorks2008. (AdventureWorks2008 is free to download and use database available on MS website)
+<br/>
+<a href="031.jpg"><img class="alignnone size-medium wp-image-123" alt="03" src="031.jpg" width="300" height="271" /></a>
+<br/><br/>
+Click the Test Connection button, and then click OK. Click OK again to close the Connection
+<br/>
+Manager dialog box.
+<br/>
+Select the (local).AdventureWorks2008 data connection in the Data Connections list, and then click Finish in the Data Source Wizard.
+<br/>
+<a href="041.jpg"><img class="alignnone size-medium wp-image-125" alt="04" src="041.jpg" width="300" height="268" /></a>
+<br/><br/>
+The Completing The Wizard page prompts you to enter a name for the new project data source. Type AdventureWorks2008 in the Data Source Name box, and then click Finish. Be sure to remove the space between Adventure and Works2008R2.
+<br/>
+<a href="061.jpg"><img class="alignnone size-medium wp-image-126" alt="06" src="061.jpg" width="300" height="271" /></a>
+<br/><br/>
+Next, repeat steps 2 to 9 to create a new project data source for the (local).Adventure- WorksDW2008R2 database, and name this data source AdventureWorksDW2008R2.
+<br/>
+<a href="051.jpg"><img class="alignnone size-medium wp-image-127" alt="05" src="051.jpg" width="291" height="300" /></a>
+<br/><br/>
+When you are finished creating the data sources, click the Save All button on the BIDS toolbar.
+<br/>
+<a href="071.jpg"><img class="alignnone size-medium wp-image-128" alt="07" src="071.jpg" width="215" height="300" /></a>
+<br/><br/>
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="ssis-exercise-03.html">SSIS Exercise 03</a>
+	</h3>
+	<hr id="j1-hr">
+SSIS Exercise 03
+<br/><br/>
+Create SSIS packages and Data sources
+<br/>
+We will add the project data sources that we just created to the two packages that we have developed.
+<br/>
+If necessary, start SQL Server Business Intelligence Development Studio (BIDS), open the project you created in Exercise 1,  SSIS Project, and then open Solution Explorer. 
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+<br/>
+Edit your MyPackage.dtsx package by double-clicking the package in Solution Explorer.
+<br/>
+<a href="001.jpg"><img class="alignnone size-medium wp-image-179" alt="00" src="001.jpg" width="300" height="154" /></a>
+<br/><br/>
+Locate the Connection Managers pane (at the bottom of the SSIS Designer window), right-click in the pane, and then click New Connection From Data Source.
+<br/>
+<a href="013.jpg"><img class="alignnone size-medium wp-image-178" alt="01" src="013.jpg" width="300" height="153" /></a>
+<br/><br/>
+In the Select Data Source dialog box, select both the AdventureWorks2008R2 and AdventureWorksDW2008R2 data sources from the list, and then click OK to accept. 
+<br/>
+This puts the two project data sources into the package’s Connection Managers pane.
+<br/>
+Perform the same steps in the DimCustomer.dtsx package to add the Adventure- Works2008R2 and AdventureWorksDW2008R2 project data sources as connection managers for the package.
+<br/>
+<a href="022.jpg"><img class="alignnone size-medium wp-image-180" alt="02" src="022.jpg" width="300" height="247" /></a>
+<br/><br/>
+When you are finished creating the connection managers, click the Save All button on the BIDS toolbar.
+<br/>
+<a href="033.jpg"><img class="alignnone size-medium wp-image-182" alt="03" src="033.jpg" width="300" height="38" /></a>
+<br/><br/>
+Remember that:
+<br/>
+Both project data sources and package connections are connection strings. However, a data source resides outside the package and can be used as the connection reference for more than one package. A package connection does not have to be associated with a data source.
+Connections are updated by their associated data sources only when the package is opened for editing in BIDS.
+<br/><br/>
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="ssis-exercise-04.html">SSIS Exercise 04</a>
+</h3>
+	<hr id="j1-hr">
+SSIS Exercise 04
+<br/><br/>
+Create control flow and execute package
+<br/>
+Start SQL Server Business Intelligence Development Studio (BIDS), open the project "SSIS Project" created earlier 
+<a title="SSIS exercise 01" href="ssis-exercise-01.html" target="_blank">here</a> and 
+<a title="SSIS exercise 02" href="ssis-exercise-02.html" target="_blank">here</a> completed till 
+<a title="SSIS exercise 03" href="ssis-exercise-03.html" target="_blank">here</a>.
+<br/><br/>
+Open the Toolbox window by selecting Toolbox from the View menu, locate the Execute SQL Task item, and drag it to the control flow workspace of your package.
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+<br/>
+<a href="016.jpg"><img class="alignnone size-medium wp-image-281" alt="01" src="016.jpg" width="300" height="146" /></a>
+<br/>
+Edit the Execute SQL Task object. This can be done by either of the following:
+<ul>
+	<li>double-click on the task icon</li>
+	<li>right-click the task icon &gt; click Edit.</li>
+</ul>
+Change the Connection property to use the AdventureWorks2008R2 connection
+<br/>
+<a href="024.jpg"><img class="alignnone size-medium wp-image-282" alt="02" src="024.jpg" width="300" height="248" /></a>
+<br/><br/>
+Update Execute SQL Task Editor &gt; Statement Property, type:
+<br/>
+<blockquote>UPDATE Production.Product
+<br/>
+SET ProductLine = 's'
+<br/>
+WHERE ProductLine IS NULL</blockquote>
+<br/>
+<a href="035.jpg"><img class="alignnone size-medium wp-image-283" alt="03" src="035.jpg" width="300" height="255" /></a>
+<br/><br/>
+Click OK in the Execute SQL Task dialog box. Then, right-click the Execute SQL Task &gt; click Rename &gt; and type Update ProductLine.
+<br/>
+<a href="042.jpg"><img class="alignnone size-medium wp-image-284" alt="04" src="042.jpg" width="300" height="248" /></a>
+<br/><br/>
+Now, drag a Sequence Container object from toolbox onto the control flow workspace.
+<br/>
+Drag the just created Update ProductLine Execute SQL Task into the Sequence Container. This will ensure that the task is nested in the Sequence Container box.
+<br/>
+<a href="052.jpg"><img class="alignnone size-medium wp-image-285" alt="05" src="052.jpg" width="300" height="148" /></a>
+<br/><br/>
+Test the execution of the package by click Start Debugging on the Standard toolbar or choose Start Debugging from the Debug menu.
+<br/>
+<a href="062.jpg"><img class="alignnone size-medium wp-image-286" alt="06" src="062.jpg" width="251" height="300" /></a>
+<br/><br/>
+The Sequence Container and Execute SQL Task should be green after the package execution is complete.
+<br/>
+<a href="072.jpg"><img class="alignnone size-medium wp-image-287" alt="07" src="072.jpg" width="300" height="179" /></a>
+<br/><br/>
+To view the execution details - Click the Execution Results tab (which was named as Progress while the package is executing) in the SSIS Designer.
+<br/>
+<a href="081.jpg"><img class="alignnone size-medium wp-image-288" alt="08" src="081.jpg" width="300" height="180" /></a>
+<br/><br/>
+To stop the debugger, Select the Stop button from the tool menu or choose Debug &gt; Stop Debugging from the Debug menu.
+<br/>
+<a href="09.jpg"><img class="alignnone size-medium wp-image-289" alt="09" src="09.jpg" width="300" height="114" /></a>
+<br/><br/>
+Click the Save All button to save the project.
+<br/><br/>
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="ssis-exercise-05.html">SSIS Exercise 05</a>
+	</h3>
+	<hr id="j1-hr">
+SSIS Exercise 05
+<br/><br/>
+Modify ETL Package Control Flow
+<br/>
+This exercise will allow us to start the process of building the DimCustomer SSIS package that will handle the ETL process from the AdventureWorks2008 database to the AdventureWorks-DW2008 database.
+<br/>
+Start SQL Server Business Intelligence Development Studio (BIDS), open the project SSIS Project you created in last exercise here and then open the empty DimCustomer package.
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+<br/>
+<a href="017.jpg"><img class="alignnone size-medium wp-image-300" alt="01" src="017.jpg" width="300" height="138" /></a>
+<br/><br/>
+From the toolbox, drag two Execute SQL Tasks onto the control flow workspace and then drag one Data Flow Task onto the workspace.
+<br/>
+<a href="025.jpg"><img class="alignnone size-medium wp-image-301" alt="02" src="025.jpg" width="300" height="217" /></a>
+<br/><br/>
+Now, connect the first Execute SQL Task to the Data Flow Task by dragging the green precedence constraint from the Execute SQL Task onto the Data Flow Task.
+<br/>
+<a href="036.jpg"><img class="alignnone size-medium wp-image-302" alt="03" src="036.jpg" width="300" height="248" /></a>
+<br/><br/>
+Then connect the green precedence constraint from the Data Flow Task to the second Execute SQL Task.
+<br/>
+<a href="043.jpg"><img class="alignnone size-medium wp-image-303" alt="04" src="043.jpg" width="300" height="248" /></a>
+<br/><br/>
+Rename the first Execute SQL Task to Truncate Update Table, and rename the second Execute SQL Task to Batch Updates.
+<br/>
+<a href="053.jpg"><img class="alignnone size-medium wp-image-304" alt="05" src="053.jpg" width="300" height="247" /></a>
+<br/><br/>
+Now, open SSMS, connect to the Database Engine, and create a new query against the AdventureWorksDW2008R2 database. Execute the following code
+<br/>
+<blockquote>USE AdventureWorksDW2008R2
+<br/>GO
+<br/>CREATE TABLE [dbo].[stgDimCustomerUpdates](
+<br/>[CustomerAlternateKey] [nvarchar](15) NULL,
+<br/>[AddressLine1] [nvarchar](60) NULL,
+<br/>[AddressLine2] [nvarchar](60) NULL,
+<br/>[BirthDate] [datetime] NULL,
+<br/>[CommuteDistance] [nvarchar](15) NULL,
+<br/>[DateFirstPurchase] [datetime] NULL,
+<br/>[EmailAddress] [nvarchar](50) NULL,
+<br/>[EnglishEducation] [nvarchar](40) NULL,
+<br/>[EnglishOccupation] [nvarchar](100) NULL,
+<br/>[FirstName] [nvarchar](50) NULL,
+<br/>[Gender] [nvarchar](1) NULL,
+<br/>[GeographyKey] [int] NULL,
+<br/>[HouseOwnerFlag] [nvarchar](1) NULL,
+<br/>[LastName] [nvarchar](50) NULL,
+<br/>[MaritalStatus] [nvarchar](1) NULL,
+<br/>[MiddleName] [nvarchar](50) NULL,
+<br/>[NumberCarsOwned] [tinyint] NULL,
+<br/>[NumberChildrenAtHome] [tinyint] NULL,
+<br/>[Phone] [nvarchar](25) NULL,
+<br/>[Suffix] [nvarchar](10) NULL,
+<br/>[Title] [nvarchar](8) NULL,
+<br/>[TotalChildren] [tinyint] NULL,
+<br/>[YearlyIncome] [nvarchar](100) NULL) ON [PRIMARY]</blockquote>
+<br/>
+<a href="063.jpg"><img class="alignnone size-medium wp-image-305" alt="06" src="063.jpg" width="300" height="155" /></a>
+<br/><br/>
+After the table is created, switch back to the DimCustomer SSIS package and edit the Execute SQL Task named Truncate Update Table.
+<br/>
+In the Execute SQL Task Editor dialog box, set the Connection property to Adventure-WorksDW2008R2, and then enter the following SQL code in the SQLStatement property
+<br/>
+<blockquote>TRUNCATE TABLE dbo.stgDimCustomerUpdates</blockquote>
+<br/>
+Click OK to save it
+<br/>
+<a href="073.jpg"><img class="alignnone size-medium wp-image-306" alt="07" src="073.jpg" width="300" height="256" /></a>
+<br/><br/>
+Edit the last Execute SQL Task, named Batch Updates, and set the Connection property to AdventureWorksDW2008R2
+<br/>
+In the SQLStatement property, enter the following UPDATE statement:
+<br/>
+<blockquote>UPDATE dbo.DimCustomer
+<br/>SET AddressLine1 = stgDimCustomerUpdates.AddressLine1
+<br/>, AddressLine2 = stgDimCustomerUpdates.AddressLine2
+<br/>, BirthDate = stgDimCustomerUpdates.BirthDate
+<br/>, CommuteDistance = stgDimCustomerUpdates.CommuteDistance
+<br/>, DateFirstPurchase = stgDimCustomerUpdates.DateFirstPurchase
+<br/>, EmailAddress = stgDimCustomerUpdates.EmailAddress
+<br/>, EnglishEducation = stgDimCustomerUpdates.EnglishEducation
+<br/>, EnglishOccupation = stgDimCustomerUpdates.EnglishOccupation
+<br/>, FirstName = stgDimCustomerUpdates.FirstName
+<br/>, Gender = stgDimCustomerUpdates.Gender
+<br/>, GeographyKey = stgDimCustomerUpdates.GeographyKey
+<br/>, HouseOwnerFlag = stgDimCustomerUpdates.HouseOwnerFlag
+<br/>, LastName = stgDimCustomerUpdates.LastName
+<br/>, MaritalStatus = stgDimCustomerUpdates.MaritalStatus
+<br/>, MiddleName = stgDimCustomerUpdates.MiddleName
+<br/>, NumberCarsOwned = stgDimCustomerUpdates.NumberCarsOwned
+<br/>, NumberChildrenAtHome = stgDimCustomerUpdates.NumberChildrenAtHome
+<br/>, Phone = stgDimCustomerUpdates.Phone
+<br/>, Suffix = stgDimCustomerUpdates.Suffix
+<br/>, Title = stgDimCustomerUpdates.Title
+<br/>, TotalChildren = stgDimCustomerUpdates.TotalChildren
+<br/>FROM dbo.DimCustomer DimCustomer
+<br/>INNER JOIN dbo.stgDimCustomerUpdates
+<br/>ON DimCustomer.CustomerAlternateKey = stgDimCustomerUpdates.CustomerAlternateKey</blockquote>
+<br/>
+Click OK in the Execute SQL Task Editor dialog box, and then save the package.
+<br/>
+<a href="082.jpg"><img class="alignnone size-medium wp-image-307" alt="08" src="082.jpg" width="300" height="255" /></a>
+<br/><br/>
+You have successfully created an ETL flow.
+<br/><br/>
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="ssis-control-flow-containers.html">SSIS Control Flow Containers</a>
+	</h3>
+	<hr id="j1-hr">
+SSIS Control Flow Containers
+<br/><br/>
+A package will and must contain at least one task that performs some or the other operation; however, mostly, packages will have numerous tasks that coordinate with each other.
+<br/>
+There is need for finding a way to organize those tasks. This is where a control flow container come ointo picture.
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+<br/>
+A control flow container lets you group tasks together to control how tasks are run in parallel as well as ordering, logging, and transactions. 
+<br/>
+Containers can also execute the tasks within them several times based on iterative requirements.
+<br/><br/>
+Same as tasks, containers can be found in the toolbox when working in the control flow. Simply drag the container from the toolbox onto your control flow workspace.
+<br/>
+<a href="014.jpg"><img class="alignnone size-medium wp-image-245" alt="01" src="014.jpg" width="300" height="226" /></a>
+<br/><br/>
+Three primary containers in SSIS are as follows:
+<br/><br/>
+<strong>Sequence Container</strong> Allows organizing subordinate tasks by grouping them together, and apply transactions or assign logging to the container.
+<br/>
+<strong>For Loop Container</strong> Provides the same functionality as the Sequence Container except that it also allows to run the tasks within it multiple times based on an evaluation condition, such as looping from 1 to 10.
+<br/>
+<strong>Foreach Loop Container</strong> Also allows looping, but instead of providing a condition expression, loops over a set of objects, such as files in a folder. It can also return file name into variable.
+<br/><br/>
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="ssis-control-flow-objects.html">SSIS Control Flow Objects and Tasks</a>
+
+	</h3>
+	<hr id="j1-hr">
+SSIS Control Flow Objects and Tasks
+<br/><br/>
+When you have an SSIS project open within BIDS and are designing a package, the tabs across the top of the SSIS Designer let you choose an SSIS component to work with. The Control Flow design surface is the first tab and displays a workspace where you configure control flow objects. 
+<br/>
+There are three primary types of control flow objects:
+<br/><br/>
+<strong>Control flow tasks</strong> Workflow objects that perform operational-level jobs
+<br/><br/>
+<strong>Control flow containers</strong> Provide a grouping mechanism for tasks and other containers
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+<br/><br/>
+<strong>Constraints</strong> Let you connect tasks and containers and define execution ordering and precedence
+<br/><br/>
+A control flow task is an SSIS component that performs an operation such as sending an e-mail message, executing an SQL statement, or copying a file from an FTP server. When a control flow task is complete, it either succeeded or failed. You use the control flow to coordinate the execution of tasks in parallel or to set precedence constraints based on the tasks’ completion status.
+<br/><br/>
+To create a new control flow task in package, drag the task from the toolbox to the Control Flow tab in the SSIS Designer
+<br/>
+After you add a task to the control flow workspace, you need to configure the task to perform the specific operation you selected. To allow configuration, you will have to EDIT the task.
+<blockquote>Few  Highlighted Tasks
+<br/><br/>
+"ActiveX Script Task" Runs Microsoft Visual Basic Scripting Edition (VBScript) and JScript code and is included mainly for legacy support when a Data Transformation Services (DTS) package is migrated to SSIS.
+<br/><br/>
+"Analysis Services Execute DDL Task" Runs XML for Analysis (XMLA) code against an SSAS database. XMLA is the data definition language (DDL) for SSAS; therefore, this task lets you perform common structure changes such as adding partitions to cubes.
+<br/><br/>
+"Analysis Services Processing Task" Allows the processing of SSAS objects through an SSIS package.
+<br/><br/>
+"Bulk Insert Task" Allows the execution of bulk copy operations for SQL Server. This task works only against a SQL Server Database Engine.
+<br/><br/>
+"Data Flow Task" Allows data processing from sources to destinations.
+<br/><br/>
+"Data Mining Query Task" Performs data mining queries and lets you capture the results for analysis.
+<br/><br/>
+"Data Profiling Task" Allows the analysis of source data for patterns, missing data, candidate keys, and statistics. These results typically inform developers about what logic to include in their SSIS packages based on their data needs.
+<br/><br/>
+"Execute DTS 2000 Package Task" Runs a DTS package within SSIS.
+<br/><br/>
+"Execute Package Task" Runs other SSIS packages either deployed to SQL Server or in the file system.
+<br/><br/>
+"Execute Process Task" Runs a command-line operation such as program or batch file execution.
+<br/><br/>
+"Execute SQL Task" Runs SQL code against any underlying database connection in the SQL language of the connected database engine.
+<br/><br/>
+"File System Task" Lets you copy, move, and delete files as well as perform other file and folder operations.
+<br/><br/>
+"FTP Task" Sends and receives files between the file system and an FTP server and performs simple file and folder operations on the FTP server.
+<br/><br/>
+"Message Queue Task" Integrates with Message Queuing (MSMQ) on a server running Windows to read and send messages.
+<br/><br/>
+"Script Task" Runs Microsoft Visual Basic 2008 or Microsoft Visual C# 2008 within an SSIS package.
+<br/><br/>
+"Send Mail Task" Sends an e-mail message through an SMTP server.
+<br/><br/>
+"Transfer [Object] Task" Tasks that copy SQL Server objects from one system to another, including databases, SQL Server Agent jobs, error messages, logins, master stored procedures, and database-level objects.
+<br/><br/>
+"Web Service Task" Lets you connect to a Web service to send or receive information.
+<br/><br/>
+"WMI Data Reader Task" Lets you run a Windows Management Instrumentation (WMI) query against the operating system to capture server information.
+<br/><br/>
+"WMI Event Watcher Task" Waits for a particular event before executing.
+<br/><br/>
+"XML Task" Combines, queries, and differentiates multiple XML files on the server.</blockquote>
+<br/><br/>
+<!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+<!-- Collapse group start -->
+<div class="row">
+<div class="collapse-group">
+	<h3>
+	<a title="BabaGyan.com | Blog Post" href="ssis-variables-script-profiling.html">SSIS Package Variables, Script and Profiling</a>
+	</h3>
+	<hr id="j1-hr">
+SSIS Package Variables, Script and Profiling
+<br/><br/>
+Variables in SSIS are used to integrate objects by passing values between tasks and containers, accepting values from external sources, or building code dynamically that is then executed. Variables are also used for auditing and logging.
+<br/>
+All SSIS variables are given a name, scope, data type, and value. The scope defines at what level within a package the variable is created. For example, when a Foreach Loop Container is selected and then Add Variable button is clicked on the toolbar for the Variables window, the variable is scoped at that level.
+<br/>
+When no tasks or containers are selected, the variable is scoped at the entire package level. Also, the Variables window lets you add, delete, or modify variables in a package.
+
+<!-- Collapse text from here -->
+<div class="collapse">
+
+
+<br/>
+<a href="015.jpg"><img class="alignnone size-medium wp-image-262" alt="01" src="015.jpg" width="288" height="300" /></a>
+<br/><br/>
+<blockquote>variables are referenced as User::[VariableName] or System::[VariableName].</blockquote>
+<br/>
+<strong>System variables</strong> are not editable but can be referenced within tasks and containers. System variables are set by the package for tracking metadata such as the package name and the user that executes the package.
+<br/>
+To view all system variables, click Show System Variables (the button labeled with an X) on the Variables window toolbar.
+<br/><br/>
+<strong>User variables</strong> can be created and defined by developer for any purpose in the package.
+<br/><br/>
+Do take a good note here of Script Task and Data Profiling Task now; because it is specially mentioned in the Self Paced training kit of Microsoft Exam 70-448.
+<br/><br/>
+Script Task is used in SSIS to execute VB.NET or C#.NET code. The Script Task has the following features:
+<br/>
+<ul>
+	<li>Uses the Visual Studio Tools for Applications 2.0 (VSTA) interface, which lets you run VB.NET and C#.NET code with the full host of methods and functions.</li>
+	<li>Variables can be referenced and updated within a script.</li>
+	<li>Connections can be referenced and updated within a script.</li>
+	<li>SSIS breakpoints can be applied within the script’s code (for the Script Task).</li>
+	<li>Runs in both a 32-bit environment (X86) and a 64-bit environment (X64).</li>
+</ul>
+
+To access SSIS variables in a Script Task, the variables has to be include in the Readonlyvariables or ReadWritevariables list, as need be.
+<br/><br/>
+Data Profiling Task is used to review source data entities, to check the cleanliness and completeness of the data, and to understand how the data is organized structurally, such as possible key columns and relationships between columns.
+<br/>
+The Data Profiling Task has two parts: the Data Profiling Task in the control flow that performs the analysis and the Data Profile Viewer to review the results.
+<br/><br/>
+To use the Data Profiling Task, first create an ADO.NET connection where the source tables or views reside. The Data Profiling Task requires an ADO.NET connection for sources. Next, drag the task from the toolbox onto the control flow, and then open the task to edit its properties. An easy way to perform a data profile is to click the Quick Profile button in the Data Profiling Task Editor.
+<br/>
+Single Table Quick Profile Form dialog box configured to run against the [Sales].[vPersonDemographics] view.
+<br/>
+<blockquote>Data Profiling Task can analyze data in various ways
+<br/>
+Column Null Ratio Profile Evaluates the column and returns the percent of NULLs in the column relative to the total number of rows in the table
+<br/>
+Column Statistics Profile returns the spread and averages of the values for numeric and datetime columns
+<br/>
+Column Value Distribution Profile Identifies the uniqueness of the values in a column across all the rows for that column
+<br/>
+Column Length Distribution Profile Shows the various value lengths for a text column and the percentage of all the rows that each length takes up
+<br/>
+Column Pattern Profile Displays any patterns found in the column data and returns the regular expression pattern that matches the pattern
+<br/>
+Candidate Key Profile Identifies one or more columns that are unique across all the rows; the percentage of uniqueness is shown
+<br/>
+Functional Dependency Profile Lists any columns that have value dependencies on other columns within the table, where a value from one column is found only when the value of another column is distinct</blockquote>
+<br/>
+<a href="023.jpg"><img class="alignnone size-medium wp-image-263" alt="02" src="023.jpg" width="300" height="253" /></a>
+<br/><br/>
+After you configure the Data Profiling Task through the Single Table Quick Profile Form dialog box, you need to specify the output XML file in the Destination property. This is where the task stores the profiling results.
+<br/>
+To view the results, open the Data Profile Viewer. (Click Start and then select All Programs, Microsoft SQL Server 2008R2, Integration Services, Data Profile Viewer.) Click Open on the toolbar, and browse to the output XML file where the results are stored.
+<br/>
+<a href="034.jpg"><img class="alignnone size-medium wp-image-264" alt="03" src="034.jpg" width="300" height="234" /></a>
+<br/><br/>
+A package can be executed in the BIDS in three ways
+<ul>
+	<li>Choose Start Debugging from the Debug menu on the menu bar</li>
+	<li>Click Start Debugging (the button containing an arrow that resembles the Play button on a DVD player) on the Standard toolbar</li>
+	<li>Press F5 on your keyboard</li>
+</ul>
+<br/>
+After a package is run in BIDS, a new tab named the Progress tab appears in the SSIS Designer. This tab shows the execution results and allows to troubleshoot any package errors that might be found. The Progress tab is renamed as Execution Results when in design view.
+<br/><br/><!-- Collapse button here -->
+</div>
+<p><a class="btn btn-success btn-lg" href="#">Click to read more &raquo;</a></p>
+</div> </div>
+<!-- Collapse group end -->
+
+
+<!-- Tag Cloud start -->
+
+<div class="container col-md-12">
+<ul class="nav nav-pills pull-right" id="tagcloud"> 
+<h3> <hr id="j1-hr"/> </h3>
+</ul>
+</div>
+
+<div class="container col-md-12" id="tagcloud">
+<ul class="nav nav-pills pull-center" id="tags"> 
+<a href="tag-hadoop.html" class="tag1">Hadoop</a>
+<a href="tag-msbi.html" class="tag2">MSBI</a>
+<a href="tag-etl-bi.html" class="tag3">ETL & BI</a>
+<a href="tag-bigdata.html" class="tag4">Bigdata</a>
+<a href="tag-reviews.html" class="tag5">Reviews</a>
+<a href="tag-case-study.html" class="tag6">Case Study</a>
+<a href="tag-others.html" class="tag10">Others</a>
+</ul>
+</div>	
+<!-- Tag Cloud end -->	
+
+</div>
+
+<!-- Jumbotron 1 end -->
+
+
+</div>
+
+<!-- Container 1 end -->
+
+<div class="jumbotron col-md-4" id="j2">
+	<h3>Also Read
+	</h3>
+<hr id="j2-hr"/>
+<ul class="list-inline" id="j2-side"> <li> <a title="BabaGyan.com | Blog Post" href="case-study-multiply-revenue-and-customer-base.html">Case Study: Multiply Revenue as well as Customer Base</a></li><li> <a title="BabaGyan.com | Blog Post" href="tool-project-tracker.html">Tool: Project Stages Tracker</a></li><li> <a title="BabaGyan.com | Blog Post" href="exploring-cloud-on-platform-google.html">Exploring Cloud platform on Google</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="babagyan-com-exploring-ghost-blogging-platform-on-bitnami.html">BabaGyan.com Exploring Ghost Blogging platform on Bitnami</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="solutions-issues-faced-hadoop-configuration.html">Solutions for issues faced during hadoop configuration</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-4.html">Hadoop and Ubuntu - step 4</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-3-set-up-ssh.html">Hadoop and Ubuntu - step 3</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-2-install-oracle-java.html">Hadoop and Ubuntu - step 2</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-1.html">Hadoop and Ubuntu - step 1</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="usage-hadoop.html">Usage of Hadoop</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-architecture-birdview.html">Hadoop architecture birdview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="pros-cons-gmail-displaying-images-emails.html">Pros and Cons of Gmail displaying images in your emails</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="clt20-2013-twitter-analysis.html">CLT20 2013 Twitter Analysis</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="etl-bi-bigdata-past-and-future.html">ETL BI BigData Past Future</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tool-daily-expense-tracker.html">Tool: Daily Expense Tracker</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ways-create-website.html">Lifesaver: Ways to create a website</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-business-intelligence-projects.html">LifeSaver: Business Intelligence Projects - Success and Failures</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-differences-between-udt-and-idt.html">LifeSaver: Differences between UDT and IDT</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="data-quality-in-etl-and-bi.html">Data Quality in ETL and BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="problem-solving-methodology.html">Problem Solving Methodology</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="what-is-mentoring.html">What is Mentoring</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-advantage.html">QlikView advantage over query based BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="types-data.html">Types of data</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lyrics-one-two-three-four-chennai-express.html">Lyrics One Two Three Four Chennai Express</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-licensing-an-overview.html">QlikView Licensing - an Overview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="baba-jee-ki-booti.html">Theme song lyrics - Baba jee ki booti</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tv-oled-led-lcd-plasma.html">TV - OLED vs LED vs LCD vs Plasma</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="review-google-moto-x.html">Review Google Moto X</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="blackberry-q10-q5-review.html">Review: Blackberry Q10 and Blackberry Q5</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-all-in-one.html">Lifesaver - SSRS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-all-in-one.html">Lifesaver - SSIS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssas-mdx-quick-fixes.html">Lifesaver - SSAS MDX Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-quick-fixes.html">Lifesaver - SSRS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-variables-script-profiling.html">SSIS Package Variables, Script and Profiling</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-quick-fixes.html">Lifesaver - SSIS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-containers.html">SSIS Control Flow Containers</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-objects.html">SSIS Control Flow Objects</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-05.html">SSIS Exercise 05</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-04.html">SSIS Exercise 04</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-03.html">SSIS Exercise 03</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-02.html">SSIS Exercise 02</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-01.html">SSIS Exercise 01</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-the-big-bang-theory.html">Theme song lyrics - The Big Bang Theory</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-friends.html">Theme song lyrics - F.R.I.E.N.D.S</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-aggregate-analytic-functions.html">SQL - Aggregate & Analytic functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="list-of-analytical-functions.html">SQL - List of Analytical functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-statement.html">SQL - Where, Operators and alias</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-structured-query-language-for-database-quering.html">SQL - Structured Query Language for Database quering</a>
+</li>
+</ul>
+</div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster 	-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/babagyan.js"></script>
+   <script src="../js/babagyan.js"></script>  <script> trackReferrer(); </script>  </body>
+</html>

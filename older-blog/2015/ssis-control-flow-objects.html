@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+	<link rel="author" href="https://plus.google.com/103656420801452265269"/>
+	<link rel="publisher" href="https://plus.google.com/113497864022889042631"/>
+
+	<title>SSIS Control Flow Objects and Tasks | BabaGyan.com | Blog</title>
+    <meta name="description" content="SSIS Control Flow Objects and Tasks MSBI"/>
+
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="@baba_gyan"/>
+	<meta name="twitter:domain" content="BabaGyan"/>
+	<meta name="twitter:creator" content="@baba_gyan"/>
+	
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/babagyan.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+<script type="application/javascript">  <script type="text/javascript">  if (window.top !== window.self) { window.top.location = window.self.location; } </script> <script type="application/javascript"> var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;	 ga('create', 'UA-155045464-2', 'auto'); ga('send', 'pageview');} </script> <script async src='https://www.google-analytics.com/analytics.js'></script> </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation"	>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><< - Back to NEW Home</a>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <div class="container">
+
+<!-- Container 1 start -->
+<div class="container col-md-8">
+
+<!-- Jumbotron 1 start -->
+
+<div class="jumbotron" id="j1">
+	<h3>SSIS Control Flow Objects and Tasks
+	</h3>
+	<hr id="j1-hr">
+SSIS Control Flow Objects and Tasks
+<br/><br/>
+When you have an SSIS project open within BIDS and are designing a package, the tabs across the top of the SSIS Designer let you choose an SSIS component to work with. The Control Flow design surface is the first tab and displays a workspace where you configure control flow objects. 
+<br/>
+There are three primary types of control flow objects:
+<br/><br/>
+<strong>Control flow tasks</strong> Workflow objects that perform operational-level jobs
+<br/><br/>
+<strong>Control flow containers</strong> Provide a grouping mechanism for tasks and other containers
+<br/><br/>
+<strong>Constraints</strong> Let you connect tasks and containers and define execution ordering and precedence
+<br/><br/>
+A control flow task is an SSIS component that performs an operation such as sending an e-mail message, executing an SQL statement, or copying a file from an FTP server. When a control flow task is complete, it either succeeded or failed. You use the control flow to coordinate the execution of tasks in parallel or to set precedence constraints based on the tasks’ completion status.
+<br/><br/>
+To create a new control flow task in package, drag the task from the toolbox to the Control Flow tab in the SSIS Designer
+<br/>
+After you add a task to the control flow workspace, you need to configure the task to perform the specific operation you selected. To allow configuration, you will have to EDIT the task.
+<blockquote>Few  Highlighted Tasks
+<br/><br/>
+"ActiveX Script Task" Runs Microsoft Visual Basic Scripting Edition (VBScript) and JScript code and is included mainly for legacy support when a Data Transformation Services (DTS) package is migrated to SSIS.
+<br/><br/>
+"Analysis Services Execute DDL Task" Runs XML for Analysis (XMLA) code against an SSAS database. XMLA is the data definition language (DDL) for SSAS; therefore, this task lets you perform common structure changes such as adding partitions to cubes.
+<br/><br/>
+"Analysis Services Processing Task" Allows the processing of SSAS objects through an SSIS package.
+<br/><br/>
+"Bulk Insert Task" Allows the execution of bulk copy operations for SQL Server. This task works only against a SQL Server Database Engine.
+<br/><br/>
+"Data Flow Task" Allows data processing from sources to destinations.
+<br/><br/>
+"Data Mining Query Task" Performs data mining queries and lets you capture the results for analysis.
+<br/><br/>
+"Data Profiling Task" Allows the analysis of source data for patterns, missing data, candidate keys, and statistics. These results typically inform developers about what logic to include in their SSIS packages based on their data needs.
+<br/><br/>
+"Execute DTS 2000 Package Task" Runs a DTS package within SSIS.
+<br/><br/>
+"Execute Package Task" Runs other SSIS packages either deployed to SQL Server or in the file system.
+<br/><br/>
+"Execute Process Task" Runs a command-line operation such as program or batch file execution.
+<br/><br/>
+"Execute SQL Task" Runs SQL code against any underlying database connection in the SQL language of the connected database engine.
+<br/><br/>
+"File System Task" Lets you copy, move, and delete files as well as perform other file and folder operations.
+<br/><br/>
+"FTP Task" Sends and receives files between the file system and an FTP server and performs simple file and folder operations on the FTP server.
+<br/><br/>
+"Message Queue Task" Integrates with Message Queuing (MSMQ) on a server running Windows to read and send messages.
+<br/><br/>
+"Script Task" Runs Microsoft Visual Basic 2008 or Microsoft Visual C# 2008 within an SSIS package.
+<br/><br/>
+"Send Mail Task" Sends an e-mail message through an SMTP server.
+<br/><br/>
+"Transfer [Object] Task" Tasks that copy SQL Server objects from one system to another, including databases, SQL Server Agent jobs, error messages, logins, master stored procedures, and database-level objects.
+<br/><br/>
+"Web Service Task" Lets you connect to a Web service to send or receive information.
+<br/><br/>
+"WMI Data Reader Task" Lets you run a Windows Management Instrumentation (WMI) query against the operating system to capture server information.
+<br/><br/>
+"WMI Event Watcher Task" Waits for a particular event before executing.
+<br/><br/>
+"XML Task" Combines, queries, and differentiates multiple XML files on the server.</blockquote>
+<br/><br/>
+<!-- Tag Cloud start -->
+
+<div class="container col-md-12">
+<ul class="nav nav-pills pull-right" id="tagcloud"> 
+<h3> <hr id="j1-hr"/> </h3>
+</ul>
+</div>
+
+<div class="container col-md-12" id="tagcloud">
+<ul class="nav nav-pills pull-center" id="tags"> 
+<a href="tag-hadoop.html" class="tag1">Hadoop</a>
+<a href="tag-msbi.html" class="tag2">MSBI</a>
+<a href="tag-etl-bi.html" class="tag3">ETL & BI</a>
+<a href="tag-bigdata.html" class="tag4">Bigdata</a>
+<a href="tag-reviews.html" class="tag5">Reviews</a>
+<a href="tag-case-study.html" class="tag6">Case Study</a>
+<a href="tag-others.html" class="tag10">Others</a>
+</ul>
+</div>	
+<!-- Tag Cloud end -->	
+
+</div>
+
+<!-- Jumbotron 1 end -->
+
+
+</div>
+
+<!-- Container 1 end -->
+
+<div class="jumbotron col-md-4" id="j2">
+	<h3>Also Read
+	</h3>
+<hr id="j2-hr"/>
+<ul class="list-inline" id="j2-side"> <li> <a title="BabaGyan.com | Blog Post" href="case-study-multiply-revenue-and-customer-base.html">Case Study: Multiply Revenue as well as Customer Base</a></li><li> <a title="BabaGyan.com | Blog Post" href="tool-project-tracker.html">Tool: Project Stages Tracker</a></li><li> <a title="BabaGyan.com | Blog Post" href="exploring-cloud-on-platform-google.html">Exploring Cloud platform on Google</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="babagyan-com-exploring-ghost-blogging-platform-on-bitnami.html">BabaGyan.com Exploring Ghost Blogging platform on Bitnami</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="solutions-issues-faced-hadoop-configuration.html">Solutions for issues faced during hadoop configuration</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-4.html">Hadoop and Ubuntu - step 4</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-3-set-up-ssh.html">Hadoop and Ubuntu - step 3</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-2-install-oracle-java.html">Hadoop and Ubuntu - step 2</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-1.html">Hadoop and Ubuntu - step 1</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="usage-hadoop.html">Usage of Hadoop</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-architecture-birdview.html">Hadoop architecture birdview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="pros-cons-gmail-displaying-images-emails.html">Pros and Cons of Gmail displaying images in your emails</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="clt20-2013-twitter-analysis.html">CLT20 2013 Twitter Analysis</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="etl-bi-bigdata-past-and-future.html">ETL BI BigData Past Future</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tool-daily-expense-tracker.html">Tool: Daily Expense Tracker</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ways-create-website.html">Lifesaver: Ways to create a website</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-business-intelligence-projects.html">LifeSaver: Business Intelligence Projects - Success and Failures</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-differences-between-udt-and-idt.html">LifeSaver: Differences between UDT and IDT</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="data-quality-in-etl-and-bi.html">Data Quality in ETL and BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="problem-solving-methodology.html">Problem Solving Methodology</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="what-is-mentoring.html">What is Mentoring</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-advantage.html">QlikView advantage over query based BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="types-data.html">Types of data</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lyrics-one-two-three-four-chennai-express.html">Lyrics One Two Three Four Chennai Express</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-licensing-an-overview.html">QlikView Licensing - an Overview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="baba-jee-ki-booti.html">Theme song lyrics - Baba jee ki booti</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tv-oled-led-lcd-plasma.html">TV - OLED vs LED vs LCD vs Plasma</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="review-google-moto-x.html">Review Google Moto X</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="blackberry-q10-q5-review.html">Review: Blackberry Q10 and Blackberry Q5</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-all-in-one.html">Lifesaver - SSRS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-all-in-one.html">Lifesaver - SSIS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssas-mdx-quick-fixes.html">Lifesaver - SSAS MDX Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-quick-fixes.html">Lifesaver - SSRS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-variables-script-profiling.html">SSIS Package Variables, Script and Profiling</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-quick-fixes.html">Lifesaver - SSIS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-containers.html">SSIS Control Flow Containers</a>
+</li><li class="active"> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-objects.html">SSIS Control Flow Objects</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-05.html">SSIS Exercise 05</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-04.html">SSIS Exercise 04</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-03.html">SSIS Exercise 03</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-02.html">SSIS Exercise 02</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-01.html">SSIS Exercise 01</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-the-big-bang-theory.html">Theme song lyrics - The Big Bang Theory</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-friends.html">Theme song lyrics - F.R.I.E.N.D.S</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-aggregate-analytic-functions.html">SQL - Aggregate & Analytic functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="list-of-analytical-functions.html">SQL - List of Analytical functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-statement.html">SQL - Where, Operators and alias</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-structured-query-language-for-database-quering.html">SQL - Structured Query Language for Database quering</a>
+</li>
+</ul>
+</div>
+ 
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster 	-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+   <script src="../js/babagyan.js"></script>  <script> trackReferrer(); </script>  </body>
+</html>

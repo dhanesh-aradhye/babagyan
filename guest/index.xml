@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Guests of HugoCast on Analytics on Air</title>
-    <link>/guest/</link>
-    <description>Recent content in Guests of HugoCast on Analytics on Air</description>
+    <title>Guests of HugoCast on BabaGyan | Blog, Podcast, Youtube and More</title>
+    <link>http://babagyan.org/guest/</link>
+    <description>Recent content in Guests of HugoCast on BabaGyan | Blog, Podcast, Youtube and More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Sep 2016 02:11:48 -0500</lastBuildDate>
-    
-	<atom:link href="/guest/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 25 Sep 2016 02:11:48 -0500</lastBuildDate><atom:link href="http://babagyan.org/guest/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

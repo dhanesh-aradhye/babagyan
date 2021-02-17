@@ -3,118 +3,136 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://babagyan.com/a-look-at-2019-analytics-tech-news/</loc>
+    <loc>http://babagyan.org/a-look-at-2019-analytics-tech-news/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/tags/acquisitions/</loc>
+    <loc>http://babagyan.org/tags/acquisitions/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/tags/analytics/</loc>
+    <loc>http://babagyan.org/tags/analytics/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/categories/analytics/</loc>
+    <loc>http://babagyan.org/categories/analytics/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/</loc>
+    <loc>http://babagyan.org/tags/aws/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/tags/aws/</loc>
+    <loc>http://babagyan.org/tags/azure/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/tags/azure/</loc>
+    <loc>http://babagyan.org/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/categories/</loc>
+    <loc>http://babagyan.org/categories/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/tags/data-science/</loc>
+    <loc>http://babagyan.org/tags/data-science/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/episode/</loc>
+    <loc>http://babagyan.org/episode/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/tags/gcp/</loc>
+    <loc>http://babagyan.org/tags/gcp/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/tags/mergers/</loc>
+    <loc>http://babagyan.org/tags/mergers/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/tags/news/</loc>
+    <loc>http://babagyan.org/tags/news/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/tags/</loc>
+    <loc>http://babagyan.org/tags/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/categories/technology/</loc>
+    <loc>http://babagyan.org/categories/technology/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/privacy-policy/</loc>
+    <loc>http://babagyan.org/privacy-policy/</loc>
     <lastmod>2019-12-01T14:46:10+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/terms-of-use/</loc>
+    <loc>http://babagyan.org/terms-of-use/</loc>
     <lastmod>2019-12-01T14:46:10+06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/contact/</loc>
+    <loc>http://babagyan.org/contact/</loc>
     <lastmod>2017-04-27T15:19:36-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/about/</loc>
+    <loc>http://babagyan.org/about/</loc>
     <lastmod>2016-09-25T02:11:48-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/about/</loc>
+    <loc>http://babagyan.org/about/</loc>
     <lastmod>2016-09-25T02:11:48-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/guest/</loc>
+    <loc>http://babagyan.org/guest/</loc>
     <lastmod>2016-09-25T02:11:48-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/host/</loc>
+    <loc>http://babagyan.org/host/</loc>
     <lastmod>2016-09-25T02:11:48-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://babagyan.com/host/dhanesh/</loc>
+    <loc>http://babagyan.org/host/dhanesh/</loc>
     <lastmod>2013-07-08T20:55:58-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://babagyan.org/blog/hello-again/</loc>
+  </url>
+  
+  <url>
+    <loc>http://babagyan.org/operating-systems/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://babagyan.org/software/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://babagyan.org/blog/</loc>
   </url>
   
 </urlset>

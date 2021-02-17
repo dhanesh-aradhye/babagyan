@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+	<link rel="author" href="https://plus.google.com/103656420801452265269"/>
+	<link rel="publisher" href="https://plus.google.com/113497864022889042631"/>
+
+	<title>Hadoop and Ubuntu - step 4 | BabaGyan.com | Blog</title>
+    <meta name="description" content="Hadoop and Ubuntu - step 4 Download and Configure Hadoop"/>
+
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="@baba_gyan"/>
+	<meta name="twitter:domain" content="BabaGyan"/>
+	<meta name="twitter:creator" content="@baba_gyan"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/babagyan.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+<script type="application/javascript">  <script type="text/javascript">  if (window.top !== window.self) { window.top.location = window.self.location; } </script> <script type="application/javascript"> var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;	 ga('create', 'UA-155045464-2', 'auto'); ga('send', 'pageview');} </script> <script async src='https://www.google-analytics.com/analytics.js'></script> </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation"	>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><< - Back to NEW Home</a>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <div class="container">
+
+<!-- Container 1 start -->
+<div class="container col-md-8">
+
+<!-- Jumbotron 1 start -->
+
+<div class="jumbotron" id="j1">
+	<h3>Hadoop and Ubuntu - step 4
+	</h3>  <i> - Now on Google Cloud</i>
+
+	<hr id="j1-hr">
+<a title="Apache Hadoop" href="http://hadoop.apache.org/" target="_blank">Hadoop</a> and <a title="Ubuntu" href="http://www.ubuntu.com/" target="_blank">Ubuntu</a> - step 4 - Install and configure Hadoop is the last step for creating the single node of hadoop
+<br/><br/>
+In the step 1 of the set up available <a title="Step 1" href="hadoop-ubuntu-step-1.html" target="_blank">here</a>, step 2 is available <a title="Step 2" href="hadoop-ubuntu-step-2-install-oracle-java.html" target="_blank">here</a>. We took a look at installation of Linux based OS (Ubuntu) for Hadoop as we opted for Linux instead of Windows for Hadoop. We also saw the reasons for the preference. We installed and Configured our chosed Java - Oracle Java.
+<br/><br/>
+<a href="images.jpg"><img class="alignleft size-full wp-image-666" alt="Hadoop" src="images.jpg" width="223" height="226" /></a>
+<br/><br/>
+<a title="Step 1" href="hadoop-ubuntu-step-1.html" target="_blank">STEP 1</a> - Choose and configure (Linux) OS of choice on Machine of Choice
+<br/><br/>
+<a title="Step 2" href="hadoop-ubuntu-step-2-install-oracle-java.html" target="_blank">STEP 2</a> - Install Java and configure it on the machine
+<br/><br/>
+<a title="Step 3" href="hadoop-ubuntu-step-3-set-up-ssh.html" target="_blank">STEP 3</a> - Configure SSH and user for SSH on Ubuntu
+<br/><br/>
+STEP 4 - Download and Configure Hadoop
+<br/><br/>
+Login as HDUser. Download Hadoop - 2.x tar file from the any mirror <a title="Hadoop official download mirrors" href="http://www.apache.org/dyn/closer.cgi/hadoop/common/" target="_blank">here</a>
+<br/><br/>
+Uncompress the Hadoop tar gz file and move it to /usr/local. We will also change owner. Use Terminal for all commands
+<br/><br/>
+
+<pre>cd Downloads
+
+sudo tar vxzf hadoop-2.2.0.tar.gz -C /usr/local
+
+cd /usr/local
+
+sudo mv hadoop-2.2.0 hadoop
+
+sudo chown -R hduser:hadoop hadoop</pre>
+<br/>
+Update the HDUser's .bashrc file
+<br/>
+<pre>cd ~
+<br/>
+gksudo gedit .bashrc</pre>
+<br/>
+<pre>Update the file at the end with below text. Use jdk folder name same as actual folder - something like "jdk-7-i386" (check in /usr/lib/jvm)
+<br/>
+#Hadoop variables
+
+export JAVA_HOME=/usr/lib/jvm/jdk/
+
+export HADOOP_INSTALL=/usr/local/hadoop
+
+export PATH=$PATH:$HADOOP_INSTALL/bin
+
+export PATH=$PATH:$HADOOP_INSTALL/sbin
+
+export HADOOP_MAPRED_HOME=$HADOOP_INSTALL
+
+export HADOOP_COMMON_HOME=$HADOOP_INSTALL
+
+export HADOOP_HDFS_HOME=$HADOOP_INSTALL
+
+export YARN_HOME=$HADOOP_INSTALL
+
+#end of update</pre>
+
+
+Save and close
+<br/><br/>
+Now open hadoop-env.sh for updating Java Home (JAVA_HOME)
+<br/>
+<pre>gksudo gedit /usr/local/hadoop/etc/hadoop/hadoop-env.sh</pre>
+<br/>
+<pre>export JAVA_HOME=/usr/lib/jvm/jdk/</pre>
+<br/>
+Save and close. Reboot the system and login with HDUser again.
+<br/><br/>
+Now, verify Hadoop installation for terminal
+<br/>
+<pre>hadoop version</pre>
+<br/>
+This should give something like below
+<br/><br/>
+<span style="color: #339966;"><strong>Hadoop 2.2.0</strong></span>
+<br/>
+<div dir="ltr"><span style="color: #339966;"><strong>Subversion https://svn.apache.org/repos/asf/hadoop/common -r 1529768</strong></span></div>
+<br/>
+<div dir="ltr"><span style="color: #339966;"><strong>Compiled by hortonmu on 2013-10-07T06:28Z</strong></span></div>
+<br/>
+<div dir="ltr"><span style="color: #339966;"><strong>Compiled with protoc 2.5.0</strong></span></div>
+<br/>
+<div dir="ltr"><span style="color: #339966;"><strong>From source with checksum 79e53ce7994d1628b240f09af91e1af4</strong></span></div>
+<br/>
+<div dir="ltr"><span style="color: #339966;"><strong>This command was run using /usr/local/hadoop/share/hadoop/common/hadoop-common-2.2.0.jar</strong></span></div>
+<br/>
+<div dir="ltr"></div>
+<br/>
+If you get it, Congratulations!!! Hadoop is now successfully installed. If not, put me a comment on contact page
+<br/><br/>
+Now we configure it by updating its xml files
+<br/><br/>
+Open core-site.xml and add the given text between <span style="color: #993300;">&lt;configuration&gt; &lt;/configuration&gt;</span> tags
+<br/>
+<pre>gksudo gedit /usr/local/hadoop/etc/hadoop/core-site.xml</pre>
+<br/>
+<span style="color: #993300;">&lt;property&gt;</span>
+<br/>
+<span style="color: #993300;">&lt;name&gt;fs.default.name&lt;/name&gt;</span>
+<br/>
+<span style="color: #993300;">&lt;value&gt;hdfs://localhost:9000&lt;/value&gt;</span>
+<br/>
+<span style="color: #993300;">&lt;/property&gt;</span>
+<br/><br/>
+Save and Close the file
+<br/><br/>
+Open yarn-site.xml and add the given text between<span style="color: #993300;"> &lt;configuration&gt; &lt;/configuration&gt;</span> tags
+<br/>
+<pre>gksudo gedit /usr/local/hadoop/etc/hadoop/yarn-site.xml</pre>
+<br/>
+<span style="color: #993300;">&lt;property&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;name&gt;yarn.nodemanager.aux-services&lt;/name&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;value&gt;mapreduce_shuffle&lt;/value&gt;</span>
+<br/>
+<span style="color: #993300;">&lt;/property&gt;</span>
+<br/><br/>
+<span style="color: #993300;">&lt;property&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;name&gt;yarn.nodemanager.aux-services.mapreduce.shuffle.class&lt;/name&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;value&gt;org.apache.hadoop.mapred.ShuffleHandler&lt;/value&gt;</span>
+<br/>
+<span style="color: #993300;">&lt;/property&gt;</span>
+<br/><br/>
+Save and Close the file
+<br/><br/>
+Open mapred-site.xml.template and add the given text between <span style="color: #993300;">&lt;configuration&gt; &lt;/configuration&gt;</span> tags
+<br/>
+<pre>gksudo gedit /usr/local/hadoop/etc/hadoop/mapred-site.xml.template</pre>
+<br/>
+<span style="color: #993300;">&lt;property&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;name&gt;mapreduce.framework.name&lt;/name&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;value&gt;yarn&lt;/value&gt;</span>
+<br/>
+<span style="color: #993300;">&lt;/property&gt;</span>
+<br/><br/>
+Save the file <span style="color: #ff0000;">as mapred-site.xml in /usr/local/hadoop/etc/hadoop/</span> directory and Close the file
+<br/><br/>
+Lets now create Name Node and Data Node through terminal
+<br/>
+<pre>cd ~
+
+mkdir -p mydata/hdfs/namenode
+
+mkdir -p mydata/hdfs/datanode</pre>
+
+Now, update hdfs-site.xml and add the given text between <span style="color: #993300;">&lt;configuration&gt; &lt;/configuration&gt;</span> tags
+
+<pre>gksudo gedit /usr/local/hadoop/etc/hadoop/hdfs-site.xml</pre>
+<br/>
+<span style="color: #993300;">&lt;property&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;name&gt;dfs.replication&lt;/name&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;value&gt;1&lt;/value&gt;</span>
+<br/>
+<span style="color: #993300;">&lt;/property&gt;</span>
+<br/><br/>
+<span style="color: #993300;">&lt;property&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;name&gt;dfs.namenode.name.dir&lt;/name&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;value&gt;file:/home/hduser/mydata/hdfs/namenode&lt;/value&gt;</span>
+<br/>
+<span style="color: #993300;">&lt;/property&gt;</span>
+<br/><br/>
+<span style="color: #993300;">&lt;property&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;name&gt;dfs.datanode.data.dir&lt;/name&gt;</span>
+<br/>
+<span style="color: #993300;"> &lt;value&gt;file:/home/hduser/mydata/hdfs/datanode&lt;/value&gt;</span>
+<br/>
+<span style="color: #993300;">&lt;/property&gt;</span>
+<br/><br/>
+Next, we will format the hdfs for our first use of Hadoop and start the Hadoop Services
+<br/>
+<pre>hdfs namenode -format</pre>
+<br/>
+<pre>start-dfs.sh</pre>
+<br/>
+<pre>start-yarn.sh</pre>
+<br/>
+Verify the Hadoop nodes running by
+<br/>
+<pre>jps</pre>
+<br/>
+The below should appear in output
+<br/><br/>
+
+<span style="color: #339966;">2970 ResourceManager
+<br/>
+3461 Jps
+<br/>
+3177 NodeManager
+<br/>
+2361 NameNode
+<br/>
+2840 SecondaryNameNode
+<br/>
+<br/>
+</span>
+This completes the set up steps for Hadoop.
+<br/><br/>
+You can also learn about <a title="uses of Hadoop" href="usage-hadoop.html" target="_blank">usage of Hadoop</a> and about <a title="Hadoop architecture" href="hadoop-architecture-birdview.html" target="_blank">Hadoop architecture</a> on <a title="BabaGyan.com" href="http://babagyan.com/" target="_blank">BabaGyan.com</a>.
+
+	
+<!-- Tag Cloud start -->
+
+<div class="container col-md-12">
+<ul class="nav nav-pills pull-right" id="tagcloud"> 
+<h3> <hr id="j1-hr"/> </h3>
+</ul>
+</div>
+
+<div class="container col-md-12" id="tagcloud">
+<ul class="nav nav-pills pull-center" id="tags"> 
+<a href="tag-hadoop.html" class="tag1">Hadoop</a>
+<a href="tag-msbi.html" class="tag2">MSBI</a>
+<a href="tag-etl-bi.html" class="tag3">ETL & BI</a>
+<a href="tag-bigdata.html" class="tag4">Bigdata</a>
+<a href="tag-reviews.html" class="tag5">Reviews</a>
+<a href="tag-case-study.html" class="tag6">Case Study</a>
+<a href="tag-others.html" class="tag10">Others</a>
+</ul>
+</div>	
+<!-- Tag Cloud end -->	
+
+</div>
+
+<!-- Jumbotron 1 end -->
+
+
+</div>
+
+<!-- Container 1 end -->
+
+<div class="jumbotron col-md-4" id="j2">
+	<h3>Also Read
+	</h3>
+<hr id="j2-hr"/>
+<ul class="list-inline" id="j2-side"> <li> <a title="BabaGyan.com | Blog Post" href="case-study-multiply-revenue-and-customer-base.html">Case Study: Multiply Revenue as well as Customer Base</a></li><li> <a title="BabaGyan.com | Blog Post" href="tool-project-tracker.html">Tool: Project Stages Tracker</a></li><li> <a title="BabaGyan.com | Blog Post" href="exploring-cloud-on-platform-google.html">Exploring Cloud platform on Google</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="babagyan-com-exploring-ghost-blogging-platform-on-bitnami.html">BabaGyan.com Exploring Ghost Blogging platform on Bitnami</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="solutions-issues-faced-hadoop-configuration.html">Solutions for issues faced during hadoop configuration</a>
+</li><li class="active"> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-4.html">Hadoop and Ubuntu - step 4</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-3-set-up-ssh.html">Hadoop and Ubuntu - step 3</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-2-install-oracle-java.html">Hadoop and Ubuntu - step 2</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-1.html">Hadoop and Ubuntu - step 1</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="usage-hadoop.html">Usage of Hadoop</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-architecture-birdview.html">Hadoop architecture birdview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="pros-cons-gmail-displaying-images-emails.html">Pros and Cons of Gmail displaying images in your emails</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="clt20-2013-twitter-analysis.html">CLT20 2013 Twitter Analysis</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="etl-bi-bigdata-past-and-future.html">ETL BI BigData Past Future</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tool-daily-expense-tracker.html">Tool: Daily Expense Tracker</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ways-create-website.html">Lifesaver: Ways to create a website</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-business-intelligence-projects.html">LifeSaver: Business Intelligence Projects - Success and Failures</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-differences-between-udt-and-idt.html">LifeSaver: Differences between UDT and IDT</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="data-quality-in-etl-and-bi.html">Data Quality in ETL and BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="problem-solving-methodology.html">Problem Solving Methodology</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="what-is-mentoring.html">What is Mentoring</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-advantage.html">QlikView advantage over query based BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="types-data.html">Types of data</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lyrics-one-two-three-four-chennai-express.html">Lyrics One Two Three Four Chennai Express</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-licensing-an-overview.html">QlikView Licensing - an Overview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="baba-jee-ki-booti.html">Theme song lyrics - Baba jee ki booti</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tv-oled-led-lcd-plasma.html">TV - OLED vs LED vs LCD vs Plasma</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="review-google-moto-x.html">Review Google Moto X</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="blackberry-q10-q5-review.html">Review: Blackberry Q10 and Blackberry Q5</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-all-in-one.html">Lifesaver - SSRS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-all-in-one.html">Lifesaver - SSIS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssas-mdx-quick-fixes.html">Lifesaver - SSAS MDX Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-quick-fixes.html">Lifesaver - SSRS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-variables-script-profiling.html">SSIS Package Variables, Script and Profiling</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-quick-fixes.html">Lifesaver - SSIS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-containers.html">SSIS Control Flow Containers</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-objects.html">SSIS Control Flow Objects</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-05.html">SSIS Exercise 05</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-04.html">SSIS Exercise 04</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-03.html">SSIS Exercise 03</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-02.html">SSIS Exercise 02</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-01.html">SSIS Exercise 01</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-the-big-bang-theory.html">Theme song lyrics - The Big Bang Theory</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-friends.html">Theme song lyrics - F.R.I.E.N.D.S</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-aggregate-analytic-functions.html">SQL - Aggregate & Analytic functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="list-of-analytical-functions.html">SQL - List of Analytical functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-statement.html">SQL - Where, Operators and alias</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-structured-query-language-for-database-quering.html">SQL - Structured Query Language for Database quering</a>
+</li>
+</ul>
+</div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster 	-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+   <script src="../js/babagyan.js"></script>  <script> trackReferrer(); </script>  </body>
+</html>

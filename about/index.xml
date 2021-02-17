@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Abouts on Analytics on Air</title>
-    <link>/about/</link>
-    <description>Recent content in Abouts on Analytics on Air</description>
+    <title>Abouts on BabaGyan | Blog, Podcast, Youtube and More</title>
+    <link>http://babagyan.org/about/</link>
+    <description>Recent content in Abouts on BabaGyan | Blog, Podcast, Youtube and More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Sep 2016 02:11:48 -0500</lastBuildDate>
-    
-	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 25 Sep 2016 02:11:48 -0500</lastBuildDate><atom:link href="http://babagyan.org/about/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>about</title>
-      <link>/about/</link>
+      <link>http://babagyan.org/about/</link>
       <pubDate>Sun, 25 Sep 2016 02:11:48 -0500</pubDate>
       
-      <guid>/about/</guid>
-      <description>I love my podcast You should love it too.
-Podcast&#39;s main intent is to share knowledge. If you want to be our guest on podcast or want to be a co-host or host on your own on the BabaGyan podcast, please write to use an email at Contact@BabaGyan.com!
+      <guid>http://babagyan.org/about/</guid>
+      <description>I am Dhanesh Aradhye and this is my Podcast!! Hope you will love listening to it as much as I do creating it.
+Podcast&amp;rsquo;s main intent is to share knowledge. If you want to be our guest on podcast or want to be a co-host or host on your own on the BabaGyan podcast, please write to use an email at Contact@BabaGyan.com!
 Credits: BabaGyan.com is build using cloud technologies with open source frameworks such as hugo and castanet.</description>
     </item>
     

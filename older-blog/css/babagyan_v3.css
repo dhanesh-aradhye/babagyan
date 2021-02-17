@@ -1,0 +1,286 @@
+body {
+  min-height: 500px;
+  padding-top: 60px;
+  background-color: #FFFFFF;
+}
+
+
+.nav a:link, a:visited { color: #282828; }
+.nav a:hover { color: #282828; font-weight: bold;}
+.nav .active  { font-weight: bold;}
+
+	
+.navbar {
+  .navbar-inner {
+    background-color: #ffffff;
+  }
+}
+
+.navbar-default {
+  background-color: #343434;
+  font-size: 20px;
+  
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #FFFFFF;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-text {
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #FFFFFF;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #FFFFFF;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #282828;
+  background-color: #FFFFFF;
+  }
+
+.navbar-default .navbar-brand {
+  color: #FFFFFF;
+  font-size: 32px;
+}
+
+#j11 {
+padding: 20px 5px 20px 15px; 
+margin-bottom: 10px;
+color: inherit;
+background-color: #DCD8CF;
+}
+
+#j1 {
+padding: 20px 5px 20px 15px; 
+margin-bottom: 10px;
+color: inherit;
+background-color: #DCD8CF;
+}
+
+#j2 {
+padding: 20px 5px 20px 15px; 
+margin-bottom: 10px;
+color: #FFFFFF;
+background-color: #E25D33;
+right: 0;
+}
+
+#j1-hr {	
+color: #FFFFFF;
+background-color: #FFFFFF;
+height: 2px;
+}
+
+#j2-hr {	
+color: #FFFFFF;
+background-color: #FFFFFF;
+height: 2px;
+}
+
+#j22-hr {	
+color: transparent;
+background-color: transparent;
+height: 0.1px;
+}
+
+#j2-side {
+  background-color: transparent;
+}
+
+#href-id1{
+  color: #FFFFFF;
+  background-color: #E25D33;
+  border-color: #000000;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+
+}
+
+#tagcloud {background-color: transparent; font-family: "Consolas"; }
+#tags {background-color: transparent; font-family: "Consolas"; }
+#tagcloud a.tag1:hover { font-weight: bold;}
+#tagcloud a.tag2:hover { font-weight: bold;}
+#tagcloud a.tag3:hover { font-weight: bold;}
+#tagcloud a.tag4:hover { font-weight: bold;}
+#tagcloud a.tag5:hover { font-weight: bold;}
+#tagcloud a.tag6:hover { font-weight: bold;}
+#tagcloud a.tag7:hover { font-weight: bold;}
+#tagcloud a.tag8:hover { font-weight: bold;}
+#tagcloud a.tag9:hover { font-weight: bold;}
+#tagcloud a.tag10:hover { font-weight: bold;}
+ 
+#tagcloud a.tag1 { 
+text-decoration:none;
+display: block; 
+font-size: 500%; 
+font-weight: normal; 
+color: #CC99CC; 
+  -webkit-transform: rotate(0deg); 
+     -moz-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+       -o-transform: rotate(0deg); 
+          transform: rotate(0deg);
+float: left;        
+    vertical-align:top;
+}
+
+#tags a.tag2 { 
+text-decoration:none;
+display: block; 
+font-size: 200%; 
+font-weight: 100;
+color: #6ABEDB; 
+  -webkit-transform: rotate(90deg); 
+     -moz-transform: rotate(90deg); 
+      -ms-transform: rotate(90deg); 
+       -o-transform: rotate(90deg); 
+          transform: rotate(90deg);
+    float: right;
+    vertical-align:top;
+}
+
+#tagcloud a.tag3 { 
+text-decoration:none;
+display: block; 
+font-size: 300%; 
+font-weight: 100; 
+color: #E25D33;
+  -webkit-transform: rotate(0deg); 
+     -moz-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+       -o-transform: rotate(0deg); 
+          transform: rotate(0deg);
+    float: right;
+    vertical-align:top;
+}
+
+#tagcloud a.tag4 { 
+text-decoration:none;
+display: block; 
+font-size: 250%; 
+font-weight: 100; 
+color: #CCCC00; 
+  -webkit-transform: rotate(0deg); 
+     -moz-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+       -o-transform: rotate(0deg); 
+          transform: rotate(0deg);
+    float: left;
+    vertical-align:top;
+}
+
+#tagcloud a.tag5 { 
+text-decoration:none;
+display: block; 
+font-size: 300%; 
+font-weight: 100; 
+color: #081; 
+  -webkit-transform: rotate(0deg); 
+     -moz-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+       -o-transform: rotate(0deg); 
+          transform: rotate(0deg);
+    float: right;
+    vertical-align:top;
+}
+
+#tagcloud a.tag6 { 
+text-decoration:none;
+display: block; 
+font-size: 200%; 
+font-weight: 100; 
+color: #A62139;
+  -webkit-transform: rotate(0deg); 
+     -moz-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+       -o-transform: rotate(0deg); 
+          transform: rotate(0deg);
+    float: right;
+    vertical-align:top;
+}
+
+#tagcloud a.tag7 { 
+text-decoration:none;
+display: block; 
+font-size: 200%; 
+font-weight: 100; 
+color: #111111; 
+  -webkit-transform: rotate(0deg); 
+     -moz-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+       -o-transform: rotate(0deg); 
+          transform: rotate(0deg);
+float: left;        
+    vertical-align:top;
+}
+
+#tagcloud a.tag8 { 
+text-decoration:none;
+display: block; 
+font-size: 200%; 
+font-weight: 100; 
+color: #111111; 
+  -webkit-transform: rotate(0deg); 
+     -moz-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+       -o-transform: rotate(0deg); 
+          transform: rotate(0deg);
+float: left;        
+    vertical-align:top;
+}
+
+#tagcloud a.tag9 { 
+text-decoration:none;
+display: block; 
+font-size: 200%; 
+font-weight: 100; 
+color: #111111; 
+  -webkit-transform: rotate(0deg); 
+     -moz-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+       -o-transform: rotate(0deg); 
+          transform: rotate(0deg);
+float: left;        
+    vertical-align:top;
+}
+
+#tagcloud a.tag10 { 
+text-decoration:none;
+display: block; 
+font-size: 200%; 
+font-weight: 100; 
+color: #111111; 
+  -webkit-transform: rotate(0deg); 
+     -moz-transform: rotate(0deg); 
+      -ms-transform: rotate(0deg); 
+       -o-transform: rotate(0deg); 
+          transform: rotate(0deg);
+float: left;    
+    vertical-align:top;
+}
+
+#datetime { 
+text-decoration:none;
+display: block; 
+font-size: 100%; 
+float: right}
+
+.collapse-group {
+padding-right: 20px;
+padding-left: 15px;
+margin-bottom: 10px;
+}
+
+

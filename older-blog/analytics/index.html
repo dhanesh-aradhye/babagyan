@@ -1,0 +1,119 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Welcome to BabaGyan Analytis</title>
+<meta name="keywords" content="website,hosting,blogging,bigdata,data analytics,etl,bi,sap bo,tech services,pune.">
+<meta name="description" content="Bigdata project example. Twitter firehose example setup using Python,R,PhP and HTML. Technical blogs and help to setup online business and bigdata examples using social data.">
+<!--[if lt IE 9]>
+ <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-42217996-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script src="../js/chart.js"></script>
+<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+<style>
+	canvas{
+		float: left;
+	}
+</style>
+
+    <!--[if lte IE 8]>
+		<script src="excanvas.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+
+<div style="width:900px;height:400px;">
+	<canvas id="pie" height="400" width="200"></canvas>
+	<canvas id="bar" height="400" width="700"></canvas>
+</div>
+
+<hr>
+<h5> CLT20 - Twitter Analysis: A BigData Firehose project at BabaGyan.com. 
+(# of) words in LIVE TWEETS from Twitter.com. Click
+<a href="list.html" target="_blank">here</a> for Complete list.
+</h5>
+Learn how it works, click <a href="../gyankund/clt20-2013-twitter-analysis.html" target="_blank">here</a>
+
+
+<script>
+
+
+
+var barChartData = {
+	labels : ["clt20","cricket","mi","dravid","sachin","csk","rahul","mipaltan","tendulkar","50000","thistimefor10dulkar","rr","final","dhoni","tnt","win","team","time","mumbai","sachin_rt","royals","rajasthan","finals","","chennai","salutethelegend","indians","indian","bhogleharsha","srh","overs","rajasthanroyals","ms","six","50","play","ashwin","super","ipl","god"],
+	datasets : [
+		{
+			fillColor : "rgba(187,10,14,0.5)",
+			strokeColor : "rgba(187,10,14,0.5)",
+			data : [2697400,1465300,1042400,901800,747700,689800,537100,423500,383600,361900,358000,341100,312900,259700,209100,204700,200100,189500,182500,170100,140200,136400,136000,135200,134400,125500,125000,120900,118800,116500,116200,113300,113200,112100,108300,106500,105900,105000,103800,101400]		}	]
+	
+};
+
+var pieData = [
+				{
+					value : 269740000,
+					color : "#46BFBD"
+				},
+				{
+					value : 146530000,
+					color : "#FDB45C"
+				},
+				{
+					value : 104240000,
+					color : "#949FB1"
+				},
+				{
+					value : 90180000,
+					color : "#4D5360"
+				},
+        		{
+					value: 74770000,
+					color:"#F7464A"
+				},
+        		{
+					value: 68980000,
+					color:"#F74600"
+				},
+        		{
+					value: 53710000,
+					color:"#F7004A"
+				},
+        		{
+					value: 42350000,
+					color:"#00464A"
+                }
+                
+		];
+
+
+new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+
+</script>
+
+
+<hr/> <font size="2">
+&copy; <a href="http://www.babagyan.com" target="_blank">BabaGyan.com</a>
+BabaGyan POLICY &amp; DISCLAIMER <a href="../policy.html" target="_blank">here</a>.
+</font>
+
+
+</body>
+</html>

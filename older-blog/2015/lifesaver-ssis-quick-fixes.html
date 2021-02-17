@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+	<link rel="author" href="https://plus.google.com/103656420801452265269"/>
+	<link rel="publisher" href="https://plus.google.com/113497864022889042631"/>
+
+	<title>Lifesaver - SSIS Quick fixes | BabaGyan.com | Blog</title>
+    <meta name="description" content="Lifesaver - SSIS Quick fixes MSBI"/>
+
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="@baba_gyan"/>
+	<meta name="twitter:domain" content="BabaGyan"/>
+	<meta name="twitter:creator" content="@baba_gyan"/>
+	
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/babagyan.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	
+<script type="application/javascript">  <script type="text/javascript">  if (window.top !== window.self) { window.top.location = window.self.location; } </script> <script type="application/javascript"> var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;	 ga('create', 'UA-155045464-2', 'auto'); ga('send', 'pageview');} </script> <script async src='https://www.google-analytics.com/analytics.js'></script> </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation"	>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><< - Back to NEW Home</a>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <div class="container">
+
+<!-- Container 1 start -->
+<div class="container col-md-8">
+
+<!-- Jumbotron 1 start -->
+
+<div class="jumbotron" id="j1">
+	<h3>Lifesaver - SSIS Quick fixes
+	</h3>
+	<hr id="j1-hr">
+Lifesaver - SSIS Quick fixes
+<blockquote>How many times have you thought in development that "This must be a common scenario" and then searched all over the place to find the solution for it.
+I am listing down such scenarios and fixes for those scenarios which are very frequent in the software industry. This will help not only to jumpstart but save your time afterwards durng development.
+I will be trying to cover as many areas as I can under the heading "Lifesaver".</blockquote>
+
+Create a file name with today's date
+<br/><br/>
+Expression on Flat File or File Connection Manager:
+<br/>
+"C:\\SSISProject\\MySSISExport" + (DT_WSTR, 30)(DT_DBDATE)GETDATE() + ".csv"
+<br/>
+Output: C:\SSISProject\MySSISExport2013-07-24.csv
+
+<hr />
+
+Use a 2 digit date (ex. "07" for March instead of "7")
+<br/><br/>
+RIGHT("0" + (DT_WSTR, 2)MONTH(GETDATE()),2)
+<br/>
+Expression Output: 03 (if the month is March)
+
+<hr />
+
+Multiple condition if statement
+<br/><br/>
+Say, we have a requirement where the a statement is needs to determine whether a column name is blank/NULL. If yes then should be set to unknown.
+<br/>
+To make a Logical AND condition, use "&amp;&amp;" instead of the "||" operator.
+<br/>
+ISNULL(ColumnName)||TRIM(ColumnName)==""?"Unknown": ColumnName
+
+<hr />
+
+Returns the first five characters from a zip code
+<br/><br/>
+Derived Column Transform in the Data Flow:
+<br/>
+SUBSTRING(ZipCodePlus4,1,5)
+
+<hr />
+
+Remove a given character from a string (ex. Remove "-" from a social security number)
+<br/><br/>
+Derived Column Transform in the Data Flow:
+<br/>
+REPLACE(SocialSecurityNumber, "-","")
+
+<hr />
+
+Uppercase data
+<br/><br/>
+Derived Column Transfrom in the Data Flow:
+<br/>
+UPPER(ColumnName)
+
+<hr />
+
+Replace NULL with another value
+<br/><br/>
+Derived Column Transform in the Data flow:
+<br/>
+ISNULL(ColumnName)?"New Value" : ColumnName
+
+<hr />
+
+Remove any non-numeric data from a column
+<br/><br/>
+Script Transform in the Data Flow Task with the code as follows (VB 2008):
+<br/>
+Imports System.Text.RegularExpressions
+<br/>
+Public Overrides Sub Input()_ProcessInputRows(ByVal Row As Input()Buffer)
+<br/>
+If Row.ColumnName_IsNull = False Or Row.ColumnName = "" Then
+<br/>
+Dim pattern As String = String.Empty
+<br/>
+Dim r As Regex = Nothing
+<br/>
+pattern = "[^0-9]"
+<br/>
+r = New Regex(pattern, RegexOptions.Compiled)
+<br/>
+Row.ColumnName = Regex.Replace(Row.ColumnName, pattern, "")
+<br/>
+End If
+<br/>
+End Sub
+
+<hr />
+
+Replace blanks with NULL values
+<br/><br/>
+Derived Column Transform in the Data Flow:
+<br/>
+TRIM(ColumnName)=="" ? (DT_STR, 4, 1252)NULL(DT_STR, 4, 1252) : ColumnName
+
+<hr />
+
+Convert text to InitCap,i.e, 1st letter in each word is uppercase
+<br/><br/>
+Script Transform with the line of partial code as follows:
+<br/>
+Row.OutputName = StrConv(Row.InputName, VBStrConv.ProperCase)
+
+<hr />
+
+Build dynamic SQL statement
+<br/><br/>
+Expression on the SQLStatementSource property of Execute SQL Task:
+<br/>
+"SELECT Column From " + @[User::TableName] +WHERE
+<br/>
+DateFilterColumn = '" + (DT_WSTR,4)YEAR(@
+<br/>
+[User::DateTimeVar]) + RIGHT("0" + (DT_WSTR,2)MONTH(@
+<br/>
+[User::DateTimeVar]),2) + RIGHT("0" + (DT_WSTR,2)DAY(@
+<br/>
+[User::DateTimeVar]),2) + "'"
+
+<hr />
+
+Round to the nearest two decimal mark
+<br/><br/>
+Expression on Derived Column Transform:
+<br/>
+ROUND(YourNumber, 2)
+<br/>
+Expression Output Example: 1.2600000
+<br/><br/>
+<!-- Tag Cloud start -->
+
+<div class="container col-md-12">
+<ul class="nav nav-pills pull-right" id="tagcloud"> 
+<h3> <hr id="j1-hr"/> </h3>
+</ul>
+</div>
+
+<div class="container col-md-12" id="tagcloud">
+<ul class="nav nav-pills pull-center" id="tags"> 
+<a href="tag-hadoop.html" class="tag1">Hadoop</a>
+<a href="tag-msbi.html" class="tag2">MSBI</a>
+<a href="tag-etl-bi.html" class="tag3">ETL & BI</a>
+<a href="tag-bigdata.html" class="tag4">Bigdata</a>
+<a href="tag-reviews.html" class="tag5">Reviews</a>
+<a href="tag-case-study.html" class="tag6">Case Study</a>
+<a href="tag-others.html" class="tag10">Others</a>
+</ul>
+</div>	
+<!-- Tag Cloud end -->	
+
+</div>
+
+<!-- Jumbotron 1 end -->
+
+
+</div>
+
+<!-- Container 1 end -->
+
+<div class="jumbotron col-md-4" id="j2">
+	<h3>Also Read
+	</h3>
+<hr id="j2-hr"/>
+<ul class="list-inline" id="j2-side"> <li> <a title="BabaGyan.com | Blog Post" href="case-study-multiply-revenue-and-customer-base.html">Case Study: Multiply Revenue as well as Customer Base</a></li><li> <a title="BabaGyan.com | Blog Post" href="tool-project-tracker.html">Tool: Project Stages Tracker</a></li><li> <a title="BabaGyan.com | Blog Post" href="exploring-cloud-on-platform-google.html">Exploring Cloud platform on Google</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="babagyan-com-exploring-ghost-blogging-platform-on-bitnami.html">BabaGyan.com Exploring Ghost Blogging platform on Bitnami</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="solutions-issues-faced-hadoop-configuration.html">Solutions for issues faced during hadoop configuration</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-4.html">Hadoop and Ubuntu - step 4</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-3-set-up-ssh.html">Hadoop and Ubuntu - step 3</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-2-install-oracle-java.html">Hadoop and Ubuntu - step 2</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-1.html">Hadoop and Ubuntu - step 1</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="usage-hadoop.html">Usage of Hadoop</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-architecture-birdview.html">Hadoop architecture birdview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="pros-cons-gmail-displaying-images-emails.html">Pros and Cons of Gmail displaying images in your emails</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="clt20-2013-twitter-analysis.html">CLT20 2013 Twitter Analysis</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="etl-bi-bigdata-past-and-future.html">ETL BI BigData Past Future</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tool-daily-expense-tracker.html">Tool: Daily Expense Tracker</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ways-create-website.html">Lifesaver: Ways to create a website</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-business-intelligence-projects.html">LifeSaver: Business Intelligence Projects - Success and Failures</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-differences-between-udt-and-idt.html">LifeSaver: Differences between UDT and IDT</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="data-quality-in-etl-and-bi.html">Data Quality in ETL and BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="problem-solving-methodology.html">Problem Solving Methodology</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="what-is-mentoring.html">What is Mentoring</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-advantage.html">QlikView advantage over query based BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="types-data.html">Types of data</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lyrics-one-two-three-four-chennai-express.html">Lyrics One Two Three Four Chennai Express</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-licensing-an-overview.html">QlikView Licensing - an Overview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="baba-jee-ki-booti.html">Theme song lyrics - Baba jee ki booti</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tv-oled-led-lcd-plasma.html">TV - OLED vs LED vs LCD vs Plasma</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="review-google-moto-x.html">Review Google Moto X</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="blackberry-q10-q5-review.html">Review: Blackberry Q10 and Blackberry Q5</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-all-in-one.html">Lifesaver - SSRS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-all-in-one.html">Lifesaver - SSIS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssas-mdx-quick-fixes.html">Lifesaver - SSAS MDX Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-quick-fixes.html">Lifesaver - SSRS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-variables-script-profiling.html">SSIS Package Variables, Script and Profiling</a>
+</li><li class="active"> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-quick-fixes.html">Lifesaver - SSIS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-containers.html">SSIS Control Flow Containers</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-objects.html">SSIS Control Flow Objects</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-05.html">SSIS Exercise 05</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-04.html">SSIS Exercise 04</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-03.html">SSIS Exercise 03</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-02.html">SSIS Exercise 02</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-01.html">SSIS Exercise 01</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-the-big-bang-theory.html">Theme song lyrics - The Big Bang Theory</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-friends.html">Theme song lyrics - F.R.I.E.N.D.S</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-aggregate-analytic-functions.html">SQL - Aggregate & Analytic functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="list-of-analytical-functions.html">SQL - List of Analytical functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-statement.html">SQL - Where, Operators and alias</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-structured-query-language-for-database-quering.html">SQL - Structured Query Language for Database quering</a>
+</li>
+</ul>
+</div>
+ 
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster 	-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+   <script src="../js/babagyan.js"></script>  <script> trackReferrer(); </script>  </body>
+</html>

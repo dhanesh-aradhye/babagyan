@@ -1,85 +1,81 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Analytics on Air</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on Analytics on Air</description>
+    <title>Tags on BabaGyan | Blog, Podcast, Youtube and More</title>
+    <link>http://babagyan.org/tags/</link>
+    <description>Recent content in Tags on BabaGyan | Blog, Podcast, Youtube and More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2020 04:10:01 -0500</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 10 Jan 2020 04:10:01 -0500</lastBuildDate><atom:link href="http://babagyan.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>acquisitions</title>
-      <link>/tags/acquisitions/</link>
+      <link>http://babagyan.org/tags/acquisitions/</link>
       <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
-      <guid>/tags/acquisitions/</guid>
+      <guid>http://babagyan.org/tags/acquisitions/</guid>
       <description></description>
     </item>
     
     <item>
       <title>analytics</title>
-      <link>/tags/analytics/</link>
+      <link>http://babagyan.org/tags/analytics/</link>
       <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
-      <guid>/tags/analytics/</guid>
+      <guid>http://babagyan.org/tags/analytics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>aws</title>
-      <link>/tags/aws/</link>
+      <link>http://babagyan.org/tags/aws/</link>
       <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
-      <guid>/tags/aws/</guid>
+      <guid>http://babagyan.org/tags/aws/</guid>
       <description></description>
     </item>
     
     <item>
       <title>azure</title>
-      <link>/tags/azure/</link>
+      <link>http://babagyan.org/tags/azure/</link>
       <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
-      <guid>/tags/azure/</guid>
+      <guid>http://babagyan.org/tags/azure/</guid>
       <description></description>
     </item>
     
     <item>
       <title>data-science</title>
-      <link>/tags/data-science/</link>
+      <link>http://babagyan.org/tags/data-science/</link>
       <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
-      <guid>/tags/data-science/</guid>
+      <guid>http://babagyan.org/tags/data-science/</guid>
       <description></description>
     </item>
     
     <item>
       <title>gcp</title>
-      <link>/tags/gcp/</link>
+      <link>http://babagyan.org/tags/gcp/</link>
       <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
-      <guid>/tags/gcp/</guid>
+      <guid>http://babagyan.org/tags/gcp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mergers</title>
-      <link>/tags/mergers/</link>
+      <link>http://babagyan.org/tags/mergers/</link>
       <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
-      <guid>/tags/mergers/</guid>
+      <guid>http://babagyan.org/tags/mergers/</guid>
       <description></description>
     </item>
     
     <item>
       <title>news</title>
-      <link>/tags/news/</link>
+      <link>http://babagyan.org/tags/news/</link>
       <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
-      <guid>/tags/news/</guid>
+      <guid>http://babagyan.org/tags/news/</guid>
       <description></description>
     </item>
     

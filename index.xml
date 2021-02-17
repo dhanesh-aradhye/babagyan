@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Analytics on Air</title>
-    <link>/</link>
-    <description>Recent content on Analytics on Air</description>
+    <title>BabaGyan | Blog, Podcast, Youtube and More</title>
+    <link>http://babagyan.org/</link>
+    <description>Recent content on BabaGyan | Blog, Podcast, Youtube and More</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2020 04:10:01 -0500</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 10 Jan 2020 04:10:01 -0500</lastBuildDate><atom:link href="http://babagyan.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A Look at 2019 Analytics News which will impact in 2020</title>
-      <link>/a-look-at-2019-analytics-tech-news/</link>
+      <link>http://babagyan.org/a-look-at-2019-analytics-tech-news/</link>
       <pubDate>Fri, 10 Jan 2020 04:10:01 -0500</pubDate>
       
-      <guid>/a-look-at-2019-analytics-tech-news/</guid>
+      <guid>http://babagyan.org/a-look-at-2019-analytics-tech-news/</guid>
       <description>Welcome to first episode of my podcast series &amp;ldquo;Analytics on air&amp;rdquo;. Here, I will be talking about various topics from the field of Data Analytics including hot news, insights, interviews and product presentations and tool evaluations.
 As per wikipedia, Analytics is the discovery, interpretation, and communication of meaningful patterns in data. What does that mean: It means there are 3 important sections when it comes to analytics:
  Computing - required for consuming data for discovery of patterns Data science - required for identificatoin and interpretation of patterns in data Visualization - necessary for comminication of meanings found from the pattern  What we can do with each of these defines the future of this industry.</description>
@@ -24,52 +20,80 @@ As per wikipedia, Analytics is the discovery, interpretation, and communication 
     
     <item>
       <title>Privacy Policy</title>
-      <link>/privacy-policy/</link>
+      <link>http://babagyan.org/privacy-policy/</link>
       <pubDate>Sun, 01 Dec 2019 14:46:10 +0600</pubDate>
       
-      <guid>/privacy-policy/</guid>
-      <description>Your privacy is important to us. It is babagyan&#39;s policy to respect your privacy regarding any information we may collect from you across our website, http://www.babagyan.com/, and other sites own and/or operated by us or our sponsers Turtle Products and Solution.
-It is babagyan&#39;s policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to www.babagyan.com (hereinafter, &amp;ldquo;us&amp;rdquo;, &amp;ldquo;we&amp;rdquo;, or &amp;ldquo;www.babagyan.com&amp;quot;). We respect your privacy and are committed to protecting personally identifiable information you may provide us through the Website.</description>
+      <guid>http://babagyan.org/privacy-policy/</guid>
+      <description>Your privacy is important to us. It is babagyan&amp;rsquo;s policy to respect your privacy regarding any information we may collect from you across our website, http://www.babagyan.com/, and other sites own and/or operated by us or our sponsers Turtle Products and Solution.
+It is babagyan&amp;rsquo;s policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to www.babagyan.com (hereinafter, &amp;ldquo;us&amp;rdquo;, &amp;ldquo;we&amp;rdquo;, or &amp;ldquo;www.babagyan.com&amp;rdquo;). We respect your privacy and are committed to protecting personally identifiable information you may provide us through the Website.</description>
     </item>
     
     <item>
       <title>Terms of Use</title>
-      <link>/terms-of-use/</link>
+      <link>http://babagyan.org/terms-of-use/</link>
       <pubDate>Sun, 01 Dec 2019 14:46:10 +0600</pubDate>
       
-      <guid>/terms-of-use/</guid>
+      <guid>http://babagyan.org/terms-of-use/</guid>
       <description>Terms By accessing the website at http://www.babagyan.com/, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law.
-Use License Permission is granted to temporarily download one copy of the materials (information or software) on babagyan&#39;s website for personal, non-commercial transitory viewing only.</description>
+Use License Permission is granted to temporarily download one copy of the materials (information or software) on babagyan&amp;rsquo;s website for personal, non-commercial transitory viewing only.</description>
     </item>
     
     <item>
       <title>contact</title>
-      <link>/contact/</link>
+      <link>http://babagyan.org/contact/</link>
       <pubDate>Thu, 27 Apr 2017 15:19:36 -0500</pubDate>
       
-      <guid>/contact/</guid>
+      <guid>http://babagyan.org/contact/</guid>
       <description>If you want to be our guest on podcast or want to be a co-host or host on your own on the BabaGyan podcast, please write to use an email at Contact@BabaGyan.com!
 For any other queries, feedback or complaint, send us an email at Contact@BabaGyan.com!</description>
     </item>
     
     <item>
       <title>about</title>
-      <link>/about/</link>
+      <link>http://babagyan.org/about/</link>
       <pubDate>Sun, 25 Sep 2016 02:11:48 -0500</pubDate>
       
-      <guid>/about/</guid>
-      <description>I love my podcast You should love it too.
-Podcast&#39;s main intent is to share knowledge. If you want to be our guest on podcast or want to be a co-host or host on your own on the BabaGyan podcast, please write to use an email at Contact@BabaGyan.com!
+      <guid>http://babagyan.org/about/</guid>
+      <description>I am Dhanesh Aradhye and this is my Podcast!! Hope you will love listening to it as much as I do creating it.
+Podcast&amp;rsquo;s main intent is to share knowledge. If you want to be our guest on podcast or want to be a co-host or host on your own on the BabaGyan podcast, please write to use an email at Contact@BabaGyan.com!
 Credits: BabaGyan.com is build using cloud technologies with open source frameworks such as hugo and castanet.</description>
     </item>
     
     <item>
-      <title>Dhanesh</title>
-      <link>/host/dhanesh/</link>
+      <title>Dhanesh Aradhye</title>
+      <link>http://babagyan.org/host/dhanesh/</link>
       <pubDate>Mon, 08 Jul 2013 20:55:58 -0600</pubDate>
       
-      <guid>/host/dhanesh/</guid>
-      <description>Dhanesh is software engineer, data architect and an expert in BI Analytics field. He has deep understanding and inclination towards web and mobile technologies, and has curious nature towards world finance and news affecting it. He also has an unhealthy obsession with Doctor Who, Avengers, other Marvel and many more sci-fi movies.</description>
+      <guid>http://babagyan.org/host/dhanesh/</guid>
+      <description>Dhanesh Aradhye is software engineer, data architect and an expert in BI Analytics field. He has deep understanding and inclination towards web and mobile technologies, and has curious nature towards world finance and news affecting it. He also has an unhealthy obsession with Doctor Who, Avengers, other Marvel and many more sci-fi movies.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://babagyan.org/blog/hello-again/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://babagyan.org/blog/hello-again/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://babagyan.org/operating-systems/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://babagyan.org/operating-systems/</guid>
+      <description>When you are talking about softwares, one does not consider an Operating System (OS) as a software, even though it is THE most important software on your device. I don&amp;rsquo;t blame anyone for this, as an OS is usually considered distinctively separate from the rest of the stuff which run on it. These bunch of stuff running on the OS are usually called as Softwares.
+Anywhoo, coming back to topic at hand, Operating Systems.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://babagyan.org/software/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://babagyan.org/software/</guid>
+      <description></description>
     </item>
     
   </channel>

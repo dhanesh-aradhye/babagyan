@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+	<link rel="author" href="https://plus.google.com/103656420801452265269"/>
+	<link rel="publisher" href="https://plus.google.com/113497864022889042631"/>
+
+	<title>Solutions for issues faced during hadoop configuration | BabaGyan.com | Blog</title>
+    <meta name="description" content="Solutions for issues faced during hadoop configuration"/>
+
+	<meta name="twitter:card" content="summary"/>
+	<meta name="twitter:site" content="@baba_gyan"/>
+	<meta name="twitter:domain" content="BabaGyan"/>
+	<meta name="twitter:creator" content="@baba_gyan"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/babagyan.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+<script type="application/javascript">  <script type="text/javascript">  if (window.top !== window.self) { window.top.location = window.self.location; } </script> <script type="application/javascript"> var doNotTrack = false; if (!doNotTrack) { window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;	 ga('create', 'UA-155045464-2', 'auto'); ga('send', 'pageview');} </script> <script async src='https://www.google-analytics.com/analytics.js'></script> </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation"	>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><< - Back to NEW Home</a>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <div class="container">
+
+<!-- Container 1 start -->
+<div class="container col-md-8">
+
+<!-- Jumbotron 1 start -->
+
+<div class="jumbotron" id="j1">
+	<h3>Solutions for issues faced during hadoop configuration
+	</h3>
+	<hr id="j1-hr">
+Solutions for issues faced during hadoop configuration - starting as begineer for Hadoop use is not so straight forward. There are many steps and issues that one has to overcome. I have done it and so putting this up for everyone to refer. Step by step guide for Hadoop configuration is also available here - <a title="Step 1" href="hadoop-ubuntu-step-1.html" target="_blank">STEP 1</a>, <a title="Step 2" href="hadoop-ubuntu-step-2-install-oracle-java.html" target="_blank">STEP 2</a>, <a title="Step 3" href="hadoop-ubuntu-step-3-set-up-ssh.html" target="_blank">STEP 3</a> and <a title="Step 4" href="hadoop-ubuntu-step-4.html" target="_blank">STEP 4</a>.
+<br/><br/>
+<a href="images.jpg"><img class="alignleft size-full wp-image-666" alt="Hadoop" src="images.jpg" width="223" height="226" /></a>
+<br/><br/>
+Solutions for issues faced during hadoop configuration
+<br/><br/>
+1. Which Hadoop to fetch:
+<br/>
+There are two flavors of hadoop - 1.x and 2.x.
+<br/>
+The 1.x is the initial one while 2.x was a parallel version which had YARN engine in it. So, go for Hadoop 2.x version
+<br/>
+You can find more about hadoop <a title="Hadoop downloads" href="https://hadoop.apache.org/releases.html#Download" target="_blank">here</a>
+<br/><br/>
+2. Which machine to use:
+<br/>
+Initial options are Windows and Linux. Since SSH will be extensively used, prefer a flavor of Linux for Hadoop. It will also eliminate the need to licence each instance/node that you will create.
+<br/>
+Prefer Ubuntu if you are a extensive Windows user since you will not feel completely lost in the Unix like environment. Also, there is lot of online help on Ubuntu.
+<br/>
+Use <a title="Ubuntu on Virtual Box" href="hadoop-ubuntu-step-1.html" target="_blank">this guide</a> for downloading Ubuntu and installing it on VM
+<br/><br/>
+3. Actual machines or Virtual machines:
+<br/>
+I guess this is pretty easy to decide. Virtual machines offcorse. Will need atleast one actual machine with latest configurations and atleast 4GB RAM for VMs to run.
+<br/><br/>
+4. Which Virtualization environment:
+<br/>
+There are many options but most popular will be Virtual Box by Oracle and VMWare. Virtual box is free and open source. Support wise it is good enough online so prefer Virtual Box.
+<br/>
+You can find how to set up the box <a title="Ubuntu on Virtual Box" href="hadoop-ubuntu-step-1.html" target="_blank">here</a>
+<br/><br/>
+4. Which Java to use:
+<br/>
+Most common Java versions for Linux based systems are OpenJDK; and there is always Oracle JDK available. As per the hadoop docomentation, choose a java version. It is best to go for Oracle JDK but an older and test version of Java.
+<br/><br/>
+You can find how to install java <a title="Java on Ubuntu" href="hadoop-ubuntu-step-2-install-oracle-java.html" target="_blank">here</a>
+<br/><br/>
+Major Issues:
+<br/><br/>
+1. Java and Ubuntu - 32 bit or 64 bit
+<br/>
+If your machine is latest one as 64 bit, you may be tempted to go fir a 64 bit version of OS as well as Java. But just don't go for it yet.
+<br/><br/>
+Hadoop native libraries are compiled for 32 bit and if you are using 64 bit OS, you may run into problems and errors such as:
+<br/><br/>
+<span style="color: #ff0000;">WARN util.NativeCodeLoader: Unable to load native-hadoop library for </span>
+<br/>
+<span style="color: #ff0000;">your platform...</span>
+<br/>
+<span style="color: #ff0000;">using builtin-java classes where applicable</span>
+<br/><br/>
+The solution to this is recompiling the Hadoop native libraries in your 64 bit machine. Have a look at the <a title="Hadoop Native Libraries" href="http://hadoop.apache.org/docs/r2.2.0/hadoop-project-dist/hadoop-common/NativeLibraries.html" target="_blank">native libraries page</a> and <a title="Building Hadoop native libraries" href="https://svn.apache.org/repos/asf/hadoop/common/trunk/BUILDING.txt" target="_blank">building native libraries for hadoop</a> page.
+
+But then, it will be lot better to use 32 bit OS instead, isn't it?
+<br/>
+(shout yes!!!)
+<br/><br/>
+2. Virtual Box - low graphics mode
+<br/>
+Virtual box may run into error as Low graphics is On if you are using 32 bit Ubuntu. This is due to a missing guest plugin which comes with Virtual box.
+<br/>
+You will have to run the Linux Guest CD image and load it. For this, the initial step is setting the Ubuntu to run kernel commands
+<br/>
+<pre>sudo apt-get install dkms</pre>
+then load the Guest addon CD
+<pre>sudo mount /dev/cdrom /cdrom
+sudo sh ./VBoxLinuxAdditions.run</pre>
+<br/><br/>
+3. Virtual Box - mouse pointer appears little above the point
+<br/>
+This is due to a missing patch. You can have a look at it <a title="Virtual box - mouse pointer mismatch patch" href="https://www.virtualbox.org/ticket/2306" target="_blank">here</a>.
+<br/><br/>
+For fixing this, download the <span style="color: #993300;">VBoxGuest-linux.c.patch</span> patch file from above link. Then run these commands on your Ubuntu virtual machine
+<pre>cp VBoxGuest-linux.c.patch /usr/src/vboxguest-4.1.16/vboxguest/VBoxGuest-linux.c</pre>
+<pre>/etc/init.d/vboxadd setup</pre>
+You can also learn about <a title="uses of Hadoop" href="usage-hadoop.html" target="_blank">usage of Hadoop</a> and about <a title="Hadoop architecture" href="hadoop-architecture-birdview.html" target="_blank">Hadoop architecture </a>on <a title="BabaGyan.com" href="http://babagyan.com/" target="_blank">BabaGyan.com</a>.
+<br/><br/>
+<!-- Tag Cloud start -->
+
+<div class="container col-md-12">
+<ul class="nav nav-pills pull-right" id="tagcloud"> 
+<h3> <hr id="j1-hr"/> </h3>
+</ul>
+</div>
+
+<div class="container col-md-12" id="tagcloud">
+<ul class="nav nav-pills pull-center" id="tags"> 
+<a href="tag-hadoop.html" class="tag1">Hadoop</a>
+<a href="tag-msbi.html" class="tag2">MSBI</a>
+<a href="tag-etl-bi.html" class="tag3">ETL & BI</a>
+<a href="tag-bigdata.html" class="tag4">Bigdata</a>
+<a href="tag-reviews.html" class="tag5">Reviews</a>
+<a href="tag-case-study.html" class="tag6">Case Study</a>
+<a href="tag-others.html" class="tag10">Others</a>
+</ul>
+</div>	
+<!-- Tag Cloud end -->	
+
+</div>
+
+<!-- Jumbotron 1 end -->
+
+
+</div>
+
+<!-- Container 1 end -->
+
+<div class="jumbotron col-md-4" id="j2">
+	<h3>Also Read
+	</h3>
+<hr id="j2-hr"/>
+<ul class="list-inline" id="j2-side"> <li> <a title="BabaGyan.com | Blog Post" href="case-study-multiply-revenue-and-customer-base.html">Case Study: Multiply Revenue as well as Customer Base</a></li><li> <a title="BabaGyan.com | Blog Post" href="tool-project-tracker.html">Tool: Project Stages Tracker</a></li><li> <a title="BabaGyan.com | Blog Post" href="exploring-cloud-on-platform-google.html">Exploring Cloud platform on Google</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="babagyan-com-exploring-ghost-blogging-platform-on-bitnami.html">BabaGyan.com Exploring Ghost Blogging platform on Bitnami</a>
+</li><li class="active"> <a title="BabaGyan.com | Blog Post" href="solutions-issues-faced-hadoop-configuration.html">Solutions for issues faced during hadoop configuration</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-4.html">Hadoop and Ubuntu - step 4</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-3-set-up-ssh.html">Hadoop and Ubuntu - step 3</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-2-install-oracle-java.html">Hadoop and Ubuntu - step 2</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-ubuntu-step-1.html">Hadoop and Ubuntu - step 1</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="usage-hadoop.html">Usage of Hadoop</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="hadoop-architecture-birdview.html">Hadoop architecture birdview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="pros-cons-gmail-displaying-images-emails.html">Pros and Cons of Gmail displaying images in your emails</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="clt20-2013-twitter-analysis.html">CLT20 2013 Twitter Analysis</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="etl-bi-bigdata-past-and-future.html">ETL BI BigData Past Future</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tool-daily-expense-tracker.html">Tool: Daily Expense Tracker</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ways-create-website.html">Lifesaver: Ways to create a website</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-business-intelligence-projects.html">LifeSaver: Business Intelligence Projects - Success and Failures</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-differences-between-udt-and-idt.html">LifeSaver: Differences between UDT and IDT</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="data-quality-in-etl-and-bi.html">Data Quality in ETL and BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="problem-solving-methodology.html">Problem Solving Methodology</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="what-is-mentoring.html">What is Mentoring</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-advantage.html">QlikView advantage over query based BI</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="types-data.html">Types of data</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lyrics-one-two-three-four-chennai-express.html">Lyrics One Two Three Four Chennai Express</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="qlikview-licensing-an-overview.html">QlikView Licensing - an Overview</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="baba-jee-ki-booti.html">Theme song lyrics - Baba jee ki booti</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="tv-oled-led-lcd-plasma.html">TV - OLED vs LED vs LCD vs Plasma</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="review-google-moto-x.html">Review Google Moto X</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="blackberry-q10-q5-review.html">Review: Blackberry Q10 and Blackberry Q5</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-all-in-one.html">Lifesaver - SSRS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-all-in-one.html">Lifesaver - SSIS All in one</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssas-mdx-quick-fixes.html">Lifesaver - SSAS MDX Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssrs-quick-fixes.html">Lifesaver - SSRS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-variables-script-profiling.html">SSIS Package Variables, Script and Profiling</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="lifesaver-ssis-quick-fixes.html">Lifesaver - SSIS Quick fixes</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-containers.html">SSIS Control Flow Containers</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-control-flow-objects.html">SSIS Control Flow Objects</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-05.html">SSIS Exercise 05</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-04.html">SSIS Exercise 04</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-03.html">SSIS Exercise 03</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-02.html">SSIS Exercise 02</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="ssis-exercise-01.html">SSIS Exercise 01</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-the-big-bang-theory.html">Theme song lyrics - The Big Bang Theory</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="theme-song-lyrics-friends.html">Theme song lyrics - F.R.I.E.N.D.S</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-aggregate-analytic-functions.html">SQL - Aggregate & Analytic functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="list-of-analytical-functions.html">SQL - List of Analytical functions</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-statement.html">SQL - Where, Operators and alias</a>
+</li><li> <a title="BabaGyan.com | Blog Post" href="sql-structured-query-language-for-database-quering.html">SQL - Structured Query Language for Database quering</a>
+</li>
+</ul>
+</div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster 	-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+   <script src="../js/babagyan.js"></script>  <script> trackReferrer(); </script>  </body>
+</html>
