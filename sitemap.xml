@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://babagyan.com/blog/lets-start-over-again/</loc>
+    <lastmod>2021-01-01T17:46:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/</loc>
+    <lastmod>2021-01-01T17:46:29+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://babagyan.com/blog/</loc>
+    <lastmod>2021-01-01T17:46:29+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>https://babagyan.com/a-look-at-2019-analytics-tech-news/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
@@ -29,11 +44,6 @@
   
   <url>
     <loc>https://babagyan.com/tags/azure/</loc>
-    <lastmod>2020-01-10T04:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://babagyan.com/</loc>
     <lastmod>2020-01-10T04:10:01-05:00</lastmod>
   </url>
   
@@ -118,10 +128,6 @@
   </url>
   
   <url>
-    <loc>https://babagyan.com/blog/hello-again/</loc>
-  </url>
-  
-  <url>
     <loc>https://babagyan.com/operating-systems/</loc>
     <priority>0</priority>
   </url>
@@ -129,10 +135,6 @@
   <url>
     <loc>https://babagyan.com/software/</loc>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://babagyan.com/blog/</loc>
   </url>
   
 </urlset>
