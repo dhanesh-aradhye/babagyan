@@ -1,0 +1,24 @@
+{
+	"name" : "Analytics On-Ai‪r‬ | BabaGyan.com",
+	"short_name" : "Analytics On-Ai‪r‬ | BabaGyan",
+	"description" : "The Analytics On-Ai‪r‬ at BabaGyan.com has blog, News and Podcast on Technology, Analytics and Data Science. It is a place to listen to podcast about latest in technology, learn new technologies, share your knowledge. You will learn about range of things from guests who have done it and know it. Podcast will also feature weekly News analysis for technology, finance and world macro economics topics.",
+	"start_url" : "https://babagyan.com",
+  "icons": [
+    {
+      "src": "https://babagyan.com/img/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://babagyan.com/img/android-chrome-192x192.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+	"scope" : "https://babagyan.com",
+	"display" : "fullscreen",
+	"orientation" : "any",
+	"lang" : "English",
+        "theme_color": "#a77ea9",
+        "background_color": "#a77ea9"
+}
